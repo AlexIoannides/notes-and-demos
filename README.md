@@ -1,2 +1,3 @@
-# data-science-and-ml-notebook
-Data science and machine learning experiments and code snippets
+# Data Science and Machine Learning Notebooks
+
+This repository contains examples and proof-of-concept code for various topics and tools used within the areas of practical data science and machine learning. Each directory within this project is a stand-alone mini-project with it's own Python package requirements.
