@@ -1,3 +1,9 @@
+# misc
+.DS_Store
+
+# PyTorch
+data/
+
 # mlflow
 artefacts
 *.db
