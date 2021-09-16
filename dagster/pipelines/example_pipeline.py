@@ -23,7 +23,7 @@ def download_data(context: SolidExecutionContext) -> List[Dict[str, Any]]:
 def find_max_sugar_cereal(
     context: SolidExecutionContext, cereals: List[Dict[str, Any]]
 ) -> str:
-    """X"""
+    """Find the product that has the maximum value for sugar content"""
     sorted_by_sugar = sorted(cereals, key=lambda cereal: cereal["sugars"])
     max_sugar_cereal = sorted_by_sugar[-1]["name"]
     context.log.info(f"{max_sugar_cereal} has the greatest amount of sugar.")
@@ -32,6 +32,7 @@ def find_max_sugar_cereal(
 
 @pipeline
 def cereal_data_pipeline() -> str:
+    """Compose the end-to-end cereal data pipeline."""
     return find_max_sugar_cereal(download_data())
 
 

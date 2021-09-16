@@ -22,6 +22,14 @@ $ dagster pipeline execute -f pipelines/example_pipeline.py
 
 Refer to the [Dagster docs](https://docs.dagster.io/getting-started) for more information - e.g. how to define schedules or triggers, etc.
 
+## Tests
+
+Example tests (using PyTest) for both Dagster solids and pipelines, can be found in the `tests/*` folder. To run them, use,
+
+```
+pytest
+```
+
 ## Dependencies
 
 All 3rd party Python packages required to run the notebook are contained in the `requirements.txt` file. We recommend that they are installed into a new virtual environment - e.g. with the following sequence of commands executed from your terminal,
