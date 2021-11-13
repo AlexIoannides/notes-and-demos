@@ -16,5 +16,4 @@ All 3rd party Python packages required to run the notebook are contained in the 
 $ python3 -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt
-$ jupyter lab
 ```
