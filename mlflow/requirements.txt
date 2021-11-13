@@ -1,4 +1,4 @@
-jupyterlab==2.2.9
+jupyter==1.0.0
 mlflow==1.12.1
 sklearn==0.0
 pandas==1.1.5

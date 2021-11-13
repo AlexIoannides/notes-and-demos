@@ -1,6 +1,11 @@
-## NLP Pipeline Basics with SpaCy
+# Introduction to PyTorch
 
-From tokening words to Named Entity Recognition (NER) and everything in-between - everything you might need for basic text processing to create features for training a ML models.
+A series of notebooks that explore how to use the PyTorch framework to:
+
+- manipulate tensors (i.e. as an alternative to NumPy);
+- perform auto-differentiation and minimise arbitrary functions;
+- build and train ML models from first principles; and,
+- build and train deep learning models.
 
 ## Dependencies
 
