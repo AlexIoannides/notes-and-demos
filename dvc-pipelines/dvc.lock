@@ -1,0 +1,31 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python stages/get_data.py
+    deps:
+    - path: stages/get_data.py
+      md5: 947cf9166abd9bb26357fa15a6e8c1d2
+      size: 388
+    outs:
+    - path: artefacts/dataset.csv
+      md5: 9ee47ada0122c0951fcc98bc1e26ca50
+      size: 38932
+  train_model:
+    cmd: python stages/train_model.py
+    deps:
+    - path: artefacts/dataset.csv
+      md5: 9ee47ada0122c0951fcc98bc1e26ca50
+      size: 38932
+    - path: stages/get_data.py
+      md5: 947cf9166abd9bb26357fa15a6e8c1d2
+      size: 388
+    params:
+      params.yaml:
+        train.random_state: 42
+    outs:
+    - path: artefacts/model.joblib
+      md5: 98f7f0dc59a7a416f004a31ab305f320
+      size: 849
+    - path: metrics/metrics.json
+      md5: 45679f988a4725b9e860c5eb0323c4f3
+      size: 34

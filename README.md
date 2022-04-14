@@ -9,3 +9,5 @@ This repository contains examples and proof-of-concept code for various topics a
 - **PyTorch** - for tensor manipulation, auto-differentiation and deep learning.
 - **SpaCy** - for Natural Language Processing (NLP) pipelines.
 - **SqlAlchemy** - for Object Relational Mapping (ORM).
+- **DVC** - for basic version control of ML artefacts (e.g., models and datasets).
+- **DVC Pipelines** - for orchestrating data science workflows, tracking artefacts and their lineage.
