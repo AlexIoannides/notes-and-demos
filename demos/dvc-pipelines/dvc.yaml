@@ -1,0 +1,20 @@
+stages:
+  get_data:
+    cmd: python stages/get_data.py
+    deps:
+      - stages/get_data.py
+    outs:
+      - artefacts/dataset.csv
+  train_model:
+    cmd: python stages/train_model.py
+    deps:
+      - artefacts/dataset.csv
+      - stages/get_data.py
+    params:
+      - train.random_state
+    outs:
+      - artefacts/model.joblib
+    metrics:
+      - metrics/metrics.json:
+          cache: false
+  
