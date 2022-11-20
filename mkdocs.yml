@@ -6,7 +6,7 @@ docs_dir: demos
 site_dir: .github-pages-site
 
 nav:
-  - About: index.md
+  - About: README.md
   - Data Science:
     - PyTorch:
       - pytorch/README.md
