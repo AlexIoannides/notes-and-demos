@@ -1,0 +1,5 @@
+jupyter==1.0.0
+dagit==0.12.10
+dagster==0.12.10
+requests>=2.26.0\
+pytest==6.2.5
