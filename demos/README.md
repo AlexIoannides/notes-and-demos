@@ -1,6 +1,6 @@
-# Data Science & ML Notebook
+# Data Science & ML Notes and Demos
 
-This repository contains examples and Proof-of-Concept (PoC) code for various topics and tools used within the areas of practical Data Science (DS), Data Engineering (DE) and Machine Learning (ML). All demos can be found within the `demos` folder and sub-directory within this is a stand-alone mini-project with it's own Python package requirements.
+This repository contains examples and proof-of-concept code for various topics and tools used within the areas of practical data science, data engineering and machine learning. Each directory within this project is a stand-alone mini-project with it's own Python package requirements.
 
 ## Contents
 

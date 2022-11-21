@@ -1,0 +1,64 @@
+site_name: Data Science & ML Demos
+copyright: Copyright &copy; 2021-2022 Alex Ioannides
+repo_url: https://github.com/AlexIoannides/data-science-and-ml-notebook
+repo_name: alexioannides/data-science-and-ml-notebook
+docs_dir: demos
+site_dir: .github-pages-site
+
+nav:
+  - About: README.md
+  - Data Science:
+    - PyTorch:
+      - pytorch/README.md
+      - Tensor Manipulation: pytorch/tensors.ipynb
+      - Datasets: pytorch/datasets.ipynb
+  - ML Engineering:
+    - Dagster:
+      - dagster/README.md
+      - Example Pipeline: dagster/pipelines/example_pipeline.py
+
+plugins:
+  - mkdocs-jupyter:
+      include: ["*.ipynb", "*.py"]
+      theme: dark
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: green
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+  icon:
+    logo: octicons/terminal-24
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AlexIoannides
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ioannides_alex
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alexioannides/
