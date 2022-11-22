@@ -15,7 +15,10 @@ nav:
   - ML Engineering:
     - Dagster:
       - dagster/README.md
-      - Example Pipeline: dagster/pipelines/example_pipeline.py
+      - Demo Requirements: dagster/docs/demo_requirements.md 
+      - Example Pipeline: dagster/docs/example_pipeline.md
+      - Testing Pipelines: dagster/docs/testing_pipelines.md
+      - Repos & Worskpaces: dagster/docs/repos_and_workspaces.md
 
 plugins:
   - mkdocs-jupyter:
