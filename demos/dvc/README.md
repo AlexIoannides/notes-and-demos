@@ -1,13 +1,15 @@
-## DVC Basics
+# Managing ML Artefacts with DVC
 
-How to version datasets (or any ML artefact) on cloud object storage (e.g., AWS S3), using Git, GitHub and DVC.
+Data Version Control (DVC) is a command line tool that enables version control for ML artefacts (e.g., models and training datasets), using a Git repository and a filesystem (e.g., cloud object storage).
 
-## Dependencies
+This demo is based around version control for a dataset, but it would work in exactly the same way for any ML model serialised to a file.
 
-All 3rd party Python packages required to run the notebook are contained in the `requirements.txt` file. We recommend that they are installed into a new virtual environment - e.g. with the following sequence of commands executed from your terminal,
+## Demo Objectives
 
-```shell
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ pip install -r requirements.txt
-```
+* How to initialise version control for a dataset stored on AWS S3.
+* How to update a dataset.
+* How to fetch any versions of dataset.
+
+## Running the Demo
+
+This demo is contained within a single Jupyter notebook - `data_and_model_versioning.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.

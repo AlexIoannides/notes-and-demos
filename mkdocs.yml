@@ -13,6 +13,10 @@ nav:
       - Tensor Manipulation: pytorch/tensors.ipynb
       - Datasets: pytorch/datasets.ipynb
   - ML Engineering:
+    - DVC:
+      - dvc/README.md
+      - Demo Requirements: dvc/docs/demo_requirements.md
+      - Dataset Versioning: dvc/data_and_model_versioning.ipynb
     - Dagster:
       - dagster/README.md
       - Demo Requirements: dagster/docs/demo_requirements.md 
@@ -22,8 +26,7 @@ nav:
 
 plugins:
   - mkdocs-jupyter:
-      include: ["*.ipynb", "*.py"]
-      theme: dark
+      include: ["*.ipynb"]
 
 theme:
   name: material

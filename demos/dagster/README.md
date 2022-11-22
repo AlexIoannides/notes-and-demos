@@ -4,8 +4,6 @@ Data engineering and ML often require some level of pipeline orchestration - e.g
 
 ## Demo Objectives
 
-We aim to demonstrate how to:
-
 * Define a pipeline with multiple stages.
 * Test pipelines and stages.
 * Add pipelines to a Dagster repository.
