@@ -12,6 +12,10 @@ nav:
       - pytorch/README.md
       - Tensor Manipulation: pytorch/tensors.ipynb
       - Datasets: pytorch/datasets.ipynb
+    - SpaCy:
+      - spacy/README.md
+      - Demo Requirements: spacy/docs/demo_requirements.md
+      - NLP Pipelines for Beginners: spacy/spacy_101.ipynb
   - ML Engineering:
     - MLflow:
       - mlflow/README.md
