@@ -28,6 +28,11 @@ nav:
       - Example Pipeline: dagster/docs/example_pipeline.md
       - Testing Pipelines: dagster/docs/testing_pipelines.md
       - Repos & Worskpaces: dagster/docs/repos_and_workspaces.md
+  - Data Engineering:
+    - Ibis:
+      - ibis/README.md
+      - Demo Requirements: ibis/docs/demo_requirements.md
+      - Intertcting with Data: ibis/ibis_introduction.ipynb
 
 plugins:
   - mkdocs-jupyter:

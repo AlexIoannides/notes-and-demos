@@ -11,4 +11,4 @@ We build upon the introductory DVC demo and add the tracking of ML artefact line
 
 ## Running the Demo
 
-This demo is contained within a single Jupyter notebook - `dvc_pipelines.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.
+This demo is contained within a single Jupyter notebook - `demos/dvc-pipelines/dvc_pipelines.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.

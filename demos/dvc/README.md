@@ -12,4 +12,4 @@ This demo is based around version control for a dataset, but it would work in ex
 
 ## Running the Demo
 
-This demo is contained within a single Jupyter notebook - `data_and_model_versioning.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.
+This demo is contained within a single Jupyter notebook - `demos/dvc/data_and_model_versioning.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.
