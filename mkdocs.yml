@@ -13,6 +13,10 @@ nav:
       - Tensor Manipulation: pytorch/tensors.ipynb
       - Datasets: pytorch/datasets.ipynb
   - ML Engineering:
+    - MLflow:
+      - mlflow/README.md
+      - Demo Requirements: mlflow/docs/demo_requirements.md
+      - mnaging the ML Lifecycle: mlflow/mlflow_basics.ipynb    
     - DVC:
       - dvc/README.md
       - Demo Requirements: dvc/docs/demo_requirements.md
