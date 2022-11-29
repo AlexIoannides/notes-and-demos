@@ -17,6 +17,11 @@ nav:
       - dvc/README.md
       - Demo Requirements: dvc/docs/demo_requirements.md
       - Dataset Versioning: dvc/data_and_model_versioning.ipynb
+    - DVC Pipelines:
+      - dvc-pipelines/README.md
+      - Demo Requirements: dvc-pipelines/docs/demo_requirements.md
+      - Example Pipeline: dvc-pipelines/docs/example_pipeline.md
+      - Tracking Pipeline Artefacts: dvc-pipelines/dvc_pipelines.ipynb
     - Dagster:
       - dagster/README.md
       - Demo Requirements: dagster/docs/demo_requirements.md 

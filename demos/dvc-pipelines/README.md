@@ -1,13 +1,14 @@
-## DVC Pipelines
+# DVC Pipelines
 
-Following on from DVC basics, this examples demonstrates how to use DVC pipelines to track ML artefact lineage from the data and source code.
+We build upon the introductory DVC demo and add the tracking of ML artefact lineage from data and the underlying ML pipeline source code.
 
-## Dependencies
+## Demo Objectives
 
-All 3rd party Python packages required to run the notebook are contained in the `requirements.txt` file. We recommend that they are installed into a new virtual environment - e.g. with the following sequence of commands executed from your terminal,
+* How to initialise a DVC pipelines project.
+* How to develop a ML pipeline for use with DVC.
+* How to run a ML pipeline via DVC and track the resulting artefacts.
+* How to retrieve pipeline run metrics.
 
-```shell
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ pip install -r requirements.txt
-```
+## Running the Demo
+
+This demo is contained within a single Jupyter notebook - `dvc_pipelines.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.
