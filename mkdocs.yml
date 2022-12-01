@@ -3,24 +3,57 @@ copyright: Copyright &copy; 2021-2022 Alex Ioannides
 repo_url: https://github.com/AlexIoannides/data-science-and-ml-notebook
 repo_name: alexioannides/data-science-and-ml-notebook
 docs_dir: demos
-site_dir: .github-pages-site
+site_dir: docs
 
 nav:
   - About: README.md
   - Data Science:
     - PyTorch:
       - pytorch/README.md
+      - Demo Requirements: pytorch/docs/demo_requirements.md
       - Tensor Manipulation: pytorch/tensors.ipynb
-      - Datasets: pytorch/datasets.ipynb
+      - Creating Custom Data Loaders: pytorch/datasets.ipynb
+      - Linear Regression with SGD: pytorch/linear_regression_sgd.ipynb
+      - Logistic Regression with SGD: pytorch/logistic_regression_sgd.ipynb
+      - Deep Learning and MNIST: pytorch/MNIST.ipynb
+    - SpaCy:
+      - spacy/README.md
+      - Demo Requirements: spacy/docs/demo_requirements.md
+      - NLP Pipelines for Beginners: spacy/spacy_101.ipynb
   - ML Engineering:
+    - DVC:
+      - dvc/README.md
+      - Demo Requirements: dvc/docs/demo_requirements.md
+      - Dataset Versioning: dvc/data_and_model_versioning.ipynb
+    - DVC Pipelines:
+      - dvc-pipelines/README.md
+      - Demo Requirements: dvc-pipelines/docs/demo_requirements.md
+      - Example Pipeline: dvc-pipelines/docs/example_pipeline.md
+      - Tracking Pipeline Artefacts: dvc-pipelines/dvc_pipelines.ipynb
+    - MLflow:
+      - mlflow/README.md
+      - Demo Requirements: mlflow/docs/demo_requirements.md
+      - mnaging the ML Lifecycle: mlflow/mlflow_basics.ipynb    
+  - Data Engineering:
     - Dagster:
       - dagster/README.md
-      - Example Pipeline: dagster/pipelines/example_pipeline.py
+      - Demo Requirements: dagster/docs/demo_requirements.md 
+      - Example Pipeline: dagster/docs/example_pipeline.md
+      - Testing Pipelines: dagster/docs/testing_pipelines.md
+      - Repos & Worskpaces: dagster/docs/repos_and_workspaces.md
+    - Ibis:
+      - ibis/README.md
+      - Demo Requirements: ibis/docs/demo_requirements.md
+      - Intertcting with Data: ibis/ibis_introduction.ipynb
+    - SQL Alchemy:
+      - sqlalchemy/README.md
+      - Demo Requirements: sqlalchemy/docs/demo_requirements.md
+      - Defining Data Models: sqlalchemy/docs/data_models.md
+      - ORM Basics: sqlalchemy/sql-alchemy-basics.ipynb
 
 plugins:
   - mkdocs-jupyter:
-      include: ["*.ipynb", "*.py"]
-      theme: dark
+      include: ["*.ipynb"]
 
 theme:
   name: material
