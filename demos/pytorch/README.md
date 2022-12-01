@@ -1,18 +1,22 @@
 # Introduction to PyTorch
 
-A series of notebooks that explore how to use the PyTorch framework to:
+PyTorch is a ML framework that provides NumPy-like tensor computation together with the fundamental building blocks for constructing and training deep learning models.
 
-- manipulate tensors (i.e. as an alternative to NumPy);
-- perform auto-differentiation and minimise arbitrary functions;
-- build and train ML models from first principles; and,
-- build and train deep learning models.
+## Demo Objectives
 
-## Dependencies
+* How to manipulate tensors - i.e., PyTorch as an alternative to NumPy.
+* How to use auto-differentiation and minimise arbitrary functions.
+* How to create custom data loaders for efficient model training.
+* How to build and train ML models from first principles (linear regression).
+* How to build and train a deep learning model for image classification.
 
-All 3rd party Python packages required to run the notebook are contained in the `requirements.txt` file. We recommend that they are installed into a new virtual environment - e.g. with the following sequence of commands executed from your terminal,
+## Running the Demo
 
-```shell
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ pip install -r requirements.txt
-```
+This demo spans several Jupyter notebook:
+
+* `demos/pytorch/tensors.ipynb`.
+* `demos/pytorch/linear_regression.ipynb`.
+* `demos/pytorch/logistic_regression.ipynb`.
+* `demos/pytorch/MNIST.ipynb`.
+
+Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.

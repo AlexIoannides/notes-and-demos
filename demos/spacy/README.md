@@ -1,13 +1,13 @@
-## NLP Pipeline Basics with SpaCy
+# NLP Pipeline Basics with SpaCy
 
-From tokening words to Named Entity Recognition (NER) and everything in-between - everything you might need for basic text processing to create features for training a ML models.
+From tokenising words to Named Entity Recognition (NER) and everything in-between, SpaCy provides you all the NLP tools you might need for basic text processing to create features for training ML models on text data.
 
-## Dependencies
+## Demo Objectives
 
-All 3rd party Python packages required to run the notebook are contained in the `requirements.txt` file. We recommend that they are installed into a new virtual environment - e.g. with the following sequence of commands executed from your terminal,
+* How to load a document and access sentences, tokens, and part-of-speech tags.
+* How to perform rules-based matching and phrase detection.
+* How to perform named entity recognition.
 
-```shell
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ pip install -r requirements.txt
-```
+## Running the Demo
+
+This demo is contained within a single Jupyter notebook - `demos/spacy/spacy_101.ipynb`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.

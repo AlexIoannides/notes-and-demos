@@ -1,13 +1,13 @@
-## Object Relation Mapping using SQL Alchemy and Alembic
+# Object Relation Mapping using SQL Alchemy
 
-[SQL Alchemy](https://docs.sqlalchemy.org/en/14/index.html) is a common approach to working with data models (in a database) using Python objects - i.e. [Object-Relational Mapping](https://en.wikipedia.org/wiki/Object–relational_mapping). [Alembic](https://alembic.sqlalchemy.org/en/latest/) is a Python package for managing database migrations based on the data models implied by the SQL Alchemy models - i.e. Python classes.
+[SQL Alchemy](https://docs.sqlalchemy.org/en/14/index.html) is a Python package providing tools that facilitate structured database interaction via Python objects - i.e., for [Object-Relational Mapping (ORM)](https://en.wikipedia.org/wiki/Object–relational_mapping). [Alembic](https://alembic.sqlalchemy.org/en/latest/) is a Python package for managing database migrations based on the data models implied by the SQL Alchemy models - i.e., Python classes.
+
+## Demo Objectives
+
+* How to define a data model using SQL Alchemy
+* How to interact with a database via SQL Alchemy's ORM.
+* How to use Alembic to manage database schema migrations.
 
 ## Dependencies
 
-All 3rd party Python packages required to run the notebook are contained in the `requirements.txt` file. We recommend that they are installed into a new virtual environment - e.g. with the following sequence of commands executed from your terminal,
-
-```shell
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ pip install -r requirements.txt
-```
+This demo is contained primarily within a single Jupyter notebook - `demos/sqlalchemy/sql-alchemy-basics.ipynb`, that calls upon data models defined in `demos/sqlalchemy/models.py`. Make sure you have the necessary Python package requirements installed into a Jupyter kernel for it to run successfully.
