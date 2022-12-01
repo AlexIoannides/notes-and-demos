@@ -49,7 +49,7 @@ nav:
       - sqlalchemy/README.md
       - Demo Requirements: sqlalchemy/docs/demo_requirements.md
       - Defining Data Models: sqlalchemy/docs/data_models.md
-      - ORM Basics: sqlalchemy/ibis_introduction.ipynb
+      - ORM Basics: sqlalchemy/sql-alchemy-basics.ipynb
 
 plugins:
   - mkdocs-jupyter:
