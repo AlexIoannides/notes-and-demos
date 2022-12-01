@@ -1,14 +1,5 @@
-# Data Science & ML Notes and Demos
+# Data Science and ML Notes and Demos
 
-This repository contains examples and proof-of-concept code for various topics and tools used within the areas of practical data science, data engineering and machine learning. Each directory within this project is a stand-alone mini-project with it's own Python package requirements.
+> "_The best way to learn is by doing, and the best way to remember what you have learnt is it to write about it._"
 
-## Contents
-
-- **Dagster** - for engineering data pipelines.
-- **DVC** - for basic version control of ML artefacts (e.g., models and datasets).
-- **DVC Pipelines** - for orchestrating data science workflows, tracking artefacts and their lineage.
-- **Ibis** - a unified interface for expressing analytical queries, regardless of data source.
-- **MLflow** - for managing ML models.
-- **PyTorch** - for tensor manipulation, auto-differentiation and deep learning.
-- **SpaCy** - for Natural Language Processing (NLP) pipelines.
-- **SqlAlchemy** - for Object Relational Mapping (ORM).
+This repository and the accompanying website contain an ever-growing set of self-contained demos - i.e., Python modules and notebooks that demonstrate how to use the key features of various packages and frameworks that have caught my professional attention over the years.
