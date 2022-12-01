@@ -10,8 +10,12 @@ nav:
   - Data Science:
     - PyTorch:
       - pytorch/README.md
+      - Demo Requirements: pytorch/docs/demo_requirements.md
       - Tensor Manipulation: pytorch/tensors.ipynb
-      - Datasets: pytorch/datasets.ipynb
+      - Creating Custom Data Loaders: pytorch/datasets.ipynb
+      - Linear Regression with SGD: pytorch/linear_regression_sgd.ipynb
+      - Logistic Regression with SGD: pytorch/logistic_regression_sgd.ipynb
+      - Deep Learning and MNIST: pytorch/MNIST.ipynb
     - SpaCy:
       - spacy/README.md
       - Demo Requirements: spacy/docs/demo_requirements.md
