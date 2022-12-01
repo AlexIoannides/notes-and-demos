@@ -1,6 +1,6 @@
 jupyter==1.0.0
 mlflow==1.12.1
-sklearn==0.0
+sklearn==1.0.0
 pandas==1.1.5
 tqdm==4.54.1
 numpy==1.19.4

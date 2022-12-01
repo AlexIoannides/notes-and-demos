@@ -3,7 +3,7 @@ copyright: Copyright &copy; 2021-2022 Alex Ioannides
 repo_url: https://github.com/AlexIoannides/data-science-and-ml-notebook
 repo_name: alexioannides/data-science-and-ml-notebook
 docs_dir: demos
-site_dir: .github-pages-site
+site_dir: docs
 
 nav:
   - About: README.md
