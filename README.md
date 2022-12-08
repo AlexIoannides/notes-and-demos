@@ -1,4 +1,4 @@
-# Data Science and ML Notes and Demos
+# Data Science and ML Notebooks and Demos
 
 > "_The best way to learn is by doing, and the best way to remember what you have learnt is it to write about it._"
 
