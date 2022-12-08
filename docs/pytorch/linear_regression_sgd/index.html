@@ -207,6 +207,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
@@ -414,7 +416,7 @@
   
     <li class="md-nav__item">
       <a href="../MNIST/" class="md-nav__link">
-        Deep Learning and MNIST
+        Deep Learning
       </a>
     </li>
   
@@ -450,12 +452,16 @@
         
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../spacy/">SpaCy</a>
+          <a href="../../jax/">JAX</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -463,8 +469,115 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="SpaCy" data-md-level="2">
+      <nav class="md-nav" aria-label="JAX" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          JAX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jax/docs/demo_requirements/" class="md-nav__link">
+        Demo Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jax/introduction_to_jax/" class="md-nav__link">
+        Introduction to JAX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jax/linear_regression/" class="md-nav__link">
+        Linear Regression with SGD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jax/mnist_with_flax_and_optax/" class="md-nav__link">
+        Deep Learning with Flax
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../spacy/">SpaCy</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="SpaCy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           SpaCy
         </label>
@@ -2362,7 +2475,7 @@ from torch.utils.data import Dataset, DataLoader</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;torch._C.Generator at 0x7f86550b60d0&gt;</pre>
+<pre>&lt;torch._C.Generator at 0x10572e310&gt;</pre>
 </div>
 
 </div>
@@ -2763,26 +2876,26 @@ loss per-epoch:
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[1.5875463485717773,
- 1.5779364109039307,
+<pre>[1.5875461101531982,
+ 1.5779359340667725,
  1.5811569690704346,
  1.580075740814209,
- 1.580438494682312,
- 1.5803169012069702,
- 1.5803571939468384,
- 1.5803438425064087,
+ 1.580438256263733,
+ 1.5803166627883911,
+ 1.5803577899932861,
+ 1.58034348487854,
  1.580348253250122,
- 1.5803468227386475,
+ 1.5803463459014893,
  1.5803474187850952,
- 1.5803474187850952,
- 1.5803468227386475,
- 1.5803468227386475,
- 1.5803474187850952,
- 1.5803474187850952,
- 1.5803474187850952,
- 1.5803474187850952,
- 1.5803474187850952,
- 1.5803474187850952]</pre>
+ 1.580346941947937,
+ 1.580346941947937,
+ 1.5803475379943848,
+ 1.580346941947937,
+ 1.5803475379943848,
+ 1.580346941947937,
+ 1.5803475379943848,
+ 1.580346941947937,
+ 1.5803475379943848]</pre>
 </div>
 
 </div>
@@ -2855,7 +2968,7 @@ rmse</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>tensor(1.0321, grad_fn=&lt;SqrtBackward&gt;)</pre>
+<pre>tensor(1.0321, grad_fn=&lt;SqrtBackward0&gt;)</pre>
 </div>
 
 </div>
@@ -3061,26 +3174,26 @@ train_linear_regression_pytorch(
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[1.5170483589172363,
+<pre>[1.5170482397079468,
  1.601954698562622,
  1.5731377601623535,
- 1.5827711820602417,
+ 1.5827713012695312,
  1.5795338153839111,
  1.5806201696395874,
- 1.5802559852600098,
- 1.5803779363632202,
- 1.5803366899490356,
+ 1.580255389213562,
+ 1.5803780555725098,
+ 1.5803368091583252,
  1.5803507566452026,
- 1.580346703529358,
- 1.5803474187850952,
- 1.5803474187850952,
- 1.5803474187850952,
- 1.5803468227386475,
- 1.5803472995758057,
- 1.5803474187850952,
- 1.5803472995758057,
- 1.5803474187850952,
- 1.5803472995758057]</pre>
+ 1.5803462266921997,
+ 1.5803475379943848,
+ 1.580346941947937,
+ 1.5803475379943848,
+ 1.580346941947937,
+ 1.580346941947937,
+ 1.580346941947937,
+ 1.580346941947937,
+ 1.580346941947937,
+ 1.580346941947937]</pre>
 </div>
 
 </div>
@@ -3151,7 +3264,7 @@ rmse</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>tensor(1.0321, grad_fn=&lt;SqrtBackward&gt;)</pre>
+<pre>tensor(1.0321, grad_fn=&lt;SqrtBackward0&gt;)</pre>
 </div>
 
 </div>

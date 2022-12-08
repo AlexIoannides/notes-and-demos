@@ -15,7 +15,13 @@ nav:
       - Creating Custom Data Loaders: pytorch/datasets.ipynb
       - Linear Regression with SGD: pytorch/linear_regression_sgd.ipynb
       - Logistic Regression with SGD: pytorch/logistic_regression_sgd.ipynb
-      - Deep Learning and MNIST: pytorch/MNIST.ipynb
+      - Deep Learning: pytorch/MNIST.ipynb
+    - JAX:
+      - jax/README.md
+      - Demo Requirements: jax/docs/demo_requirements.md
+      - Introduction to JAX: jax/introduction_to_jax.ipynb
+      - Linear Regression with SGD: jax/linear_regression.ipynb
+      - Deep Learning with Flax: jax/mnist_with_flax_and_optax.ipynb
     - SpaCy:
       - spacy/README.md
       - Demo Requirements: spacy/docs/demo_requirements.md
@@ -75,6 +81,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 2
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji

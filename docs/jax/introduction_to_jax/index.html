@@ -13,7 +13,7 @@
     
     
       
-        <title>An Introduction to Ibis - Data Science & ML Demos</title>
+        <title>Introduction to JAX - Data Science & ML Demos</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#an-introduction-to-ibis" class="md-skip">
+        <a href="#introduction-to-jax" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              An Introduction to Ibis
+              Introduction to JAX
             
           </span>
         </div>
@@ -189,14 +189,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -368,12 +370,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -395,7 +399,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../jax/">JAX</a>
+          <a href="../">JAX</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -418,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jax/docs/demo_requirements/" class="md-nav__link">
+      <a href="../docs/demo_requirements/" class="md-nav__link">
         Demo Requirements
       </a>
     </li>
@@ -430,11 +434,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../jax/introduction_to_jax/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction to JAX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Introduction to JAX
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imports" class="md-nav__link">
+    Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jax-as-accelerated-numpy" class="md-nav__link">
+    JAX as Accelerated Numpy
+  </a>
+  
+    <nav class="md-nav" aria-label="JAX as Accelerated Numpy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immutability" class="md-nav__link">
+    Immutability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers-and-automatic-vectorisation" class="md-nav__link">
+    Random Numbers and Automatic Vectorisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-over-ragged-collections-with-pytrees" class="md-nav__link">
+    Mapping over Ragged Collections with pytrees
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-differentiation" class="md-nav__link">
+    Auto-Differentiation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -446,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jax/linear_regression/" class="md-nav__link">
+      <a href="../linear_regression/" class="md-nav__link">
         Linear Regression with SGD
       </a>
     </li>
@@ -460,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jax/mnist_with_flax_and_optax/" class="md-nav__link">
+      <a href="../mnist_with_flax_and_optax/" class="md-nav__link">
         Deep Learning with Flax
       </a>
     </li>
@@ -863,16 +949,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -1012,14 +1096,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -1037,7 +1119,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Ibis</a>
+          <a href="../../ibis/">Ibis</a>
           
             <label for="__nav_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1060,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/demo_requirements/" class="md-nav__link">
+      <a href="../../ibis/docs/demo_requirements/" class="md-nav__link">
         Demo Requirements
       </a>
     </li>
@@ -1072,101 +1154,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          An Introduction to Ibis
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ibis/ibis_introduction/" class="md-nav__link">
         An Introduction to Ibis
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#imports-and-configuration" class="md-nav__link">
-    Imports and Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-to-a-database" class="md-nav__link">
-    Connect to a Database
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#explore-tables" class="md-nav__link">
-    Explore Tables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aggregations" class="md-nav__link">
-    Aggregations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#joining-data" class="md-nav__link">
-    Joining Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-and-writing-data" class="md-nav__link">
-    Reading and Writing Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-temporary-views-and-sql" class="md-nav__link">
-    Working with Temporary Views and SQL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lazy-evaluation-and-converting-to-pandas-dataframe" class="md-nav__link">
-    Lazy Evaluation and Converting to Pandas DataFrame
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1307,57 +1299,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#imports-and-configuration" class="md-nav__link">
-    Imports and Configuration
+  <a href="#imports" class="md-nav__link">
+    Imports
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-to-a-database" class="md-nav__link">
-    Connect to a Database
+  <a href="#jax-as-accelerated-numpy" class="md-nav__link">
+    JAX as Accelerated Numpy
+  </a>
+  
+    <nav class="md-nav" aria-label="JAX as Accelerated Numpy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immutability" class="md-nav__link">
+    Immutability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-numbers-and-automatic-vectorisation" class="md-nav__link">
+    Random Numbers and Automatic Vectorisation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-tables" class="md-nav__link">
-    Explore Tables
+  <a href="#mapping-over-ragged-collections-with-pytrees" class="md-nav__link">
+    Mapping over Ragged Collections with pytrees
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aggregations" class="md-nav__link">
-    Aggregations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#joining-data" class="md-nav__link">
-    Joining Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-and-writing-data" class="md-nav__link">
-    Reading and Writing Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-with-temporary-views-and-sql" class="md-nav__link">
-    Working with Temporary Views and SQL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lazy-evaluation-and-converting-to-pandas-dataframe" class="md-nav__link">
-    Lazy Evaluation and Converting to Pandas DataFrame
+  <a href="#auto-differentiation" class="md-nav__link">
+    Auto-Differentiation
   </a>
   
 </li>
@@ -1376,7 +1360,7 @@
                 
                   
 
-  <a href="https://github.com/AlexIoannides/data-science-and-ml-notebook/edit/master/docs/ibis/ibis_introduction.ipynb" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/AlexIoannides/data-science-and-ml-notebook/edit/master/docs/jax/introduction_to_jax.ipynb" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
@@ -2419,7 +2403,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="an-introduction-to-ibis">An Introduction to Ibis<a class="anchor-link" href="#an-introduction-to-ibis">&#182;</a></h1><p>Ibis aims to provide a single API for composing analytical queries from a variety of database 'backends' - e.g., PostgeSQL, PySpark, Pandas, etc. The API closely resembles the PySpark DataFrame API - i.e., the aim is to represent SQL expressions using Python code.</p>
+<h1 id="introduction-to-jax">Introduction to JAX<a class="anchor-link" href="#introduction-to-jax">&#182;</a></h1><p><a href="https://jax.readthedocs.io/en/latest/index.html">JAX</a> is an advanced scientific computing library for Python. At a very crude level, it's an alternative to Numpy that provides auto-differentiation and Xcellerated Linear Algebra (XLA) that can run on GPUs and TPUs. Unlike Tensorflow and PyTorch, it only operates within a functional programming paradigm, where all functions must be pure (i.e., enforce referential transparency). It is developed and maintained by Google.</p>
 
 </div>
 </div>
@@ -2431,7 +2415,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="imports-and-configuration">Imports and Configuration<a class="anchor-link" href="#imports-and-configuration">&#182;</a></h2>
+<h2 id="imports">Imports<a class="anchor-link" href="#imports">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2456,13 +2440,23 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">ibis</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
 
-<span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">interactive</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="kn">import</span> <span class="nn">jax</span>
+<span class="kn">import</span> <span class="nn">jax.numpy</span> <span class="k">as</span> <span class="nn">jnp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">import ibis
+<div id="cell-1" class="clipboard-copy-txt">from typing import List, Tuple
 
-ibis.options.interactive = True</div>
+import jax
+import jax.numpy as jnp
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from tqdm import tqdm</div>
     
         </div>
     </div>
@@ -2478,8 +2472,7 @@ ibis.options.interactive = True</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We set <code>ibis.options.interactive = True</code> to disable lazy evaluation, given that we're working in a notebook.</p>
-
+<h2 id="jax-as-accelerated-numpy">JAX as Accelerated Numpy<a class="anchor-link" href="#jax-as-accelerated-numpy">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2490,7 +2483,8 @@ ibis.options.interactive = True</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="connect-to-a-database">Connect to a Database<a class="anchor-link" href="#connect-to-a-database">&#182;</a></h2>
+<p>JAX implements the Numpy API and more-often-than-not it can be used as a stand-in replacement.</p>
+
 </div>
 </div>
 </div>
@@ -2515,11 +2509,11 @@ ibis.options.interactive = True</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;geography.sqlite&quot;</span><span class="p">)</span>
-<span class="n">connection</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="n">x</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">connection = ibis.sqlite.connect("geography.sqlite")
-connection.list_tables()</div>
+<div id="cell-2" class="clipboard-copy-txt">x = jnp.array([1.0, 2.0, 3.0, 4.0, 5.0])
+x</div>
     
         </div>
     </div>
@@ -2543,7 +2537,7 @@ connection.list_tables()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;countries&#39;, &#39;countries_gdp&#39;, &#39;gdp&#39;, &#39;independence&#39;]</pre>
+<pre>DeviceArray([1., 2., 3., 4., 5.], dtype=float32)</pre>
 </div>
 
 </div>
@@ -2560,7 +2554,8 @@ connection.list_tables()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="explore-tables">Explore Tables<a class="anchor-link" href="#explore-tables">&#182;</a></h2>
+<p>There are, however, a few subtle differences. Firstly, the output is of type <code>DeviceArray</code>, which represents an array on a particular device (CPU, GPU, etc.). To convert this back to raw Numpy, use the <code>to_py</code> method.</p>
+
 </div>
 </div>
 </div>
@@ -2585,11 +2580,9 @@ connection.list_tables()</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;countries&quot;</span><span class="p">)</span>
-<span class="n">countries</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">to_py</span><span class="p">()</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">countries = connection.table("countries")
-countries</div>
+<div id="cell-3" class="clipboard-copy-txt">x.to_py()</div>
     
         </div>
     </div>
@@ -2607,177 +2600,26 @@ countries</div>
 <div class="jp-OutputArea-child">
 
     
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/Users/alexioannides/Dropbox/work/workspace/python/data-science-and-ml-notebook/.venv_jax/lib/python3.10/site-packages/jax/_src/device_array.py:278: FutureWarning: The .to_py() method on JAX arrays is deprecated. Use np.asarray(...) instead.
+  warnings.warn(&#34;The .to_py() method on JAX arrays is deprecated. Use &#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>iso_alpha2</th>
-      <th>iso_alpha3</th>
-      <th>iso_numeric</th>
-      <th>fips</th>
-      <th>name</th>
-      <th>capital</th>
-      <th>area_km2</th>
-      <th>population</th>
-      <th>continent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AD</td>
-      <td>AND</td>
-      <td>20</td>
-      <td>AN</td>
-      <td>Andorra</td>
-      <td>Andorra la Vella</td>
-      <td>468.0</td>
-      <td>84000</td>
-      <td>EU</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AE</td>
-      <td>ARE</td>
-      <td>784</td>
-      <td>AE</td>
-      <td>United Arab Emirates</td>
-      <td>Abu Dhabi</td>
-      <td>82880.0</td>
-      <td>4975593</td>
-      <td>AS</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>4</td>
-      <td>AF</td>
-      <td>Afghanistan</td>
-      <td>Kabul</td>
-      <td>647500.0</td>
-      <td>29121286</td>
-      <td>AS</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>28</td>
-      <td>AC</td>
-      <td>Antigua and Barbuda</td>
-      <td>St. Johns</td>
-      <td>443.0</td>
-      <td>86754</td>
-      <td>NA</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>AI</td>
-      <td>AIA</td>
-      <td>660</td>
-      <td>AV</td>
-      <td>Anguilla</td>
-      <td>The Valley</td>
-      <td>102.0</td>
-      <td>13254</td>
-      <td>NA</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>247</th>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>887</td>
-      <td>YM</td>
-      <td>Yemen</td>
-      <td>Sanaa</td>
-      <td>527970.0</td>
-      <td>23495361</td>
-      <td>AS</td>
-    </tr>
-    <tr>
-      <th>248</th>
-      <td>YT</td>
-      <td>MYT</td>
-      <td>175</td>
-      <td>MF</td>
-      <td>Mayotte</td>
-      <td>Mamoudzou</td>
-      <td>374.0</td>
-      <td>159042</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>249</th>
-      <td>ZA</td>
-      <td>ZAF</td>
-      <td>710</td>
-      <td>SF</td>
-      <td>South Africa</td>
-      <td>Pretoria</td>
-      <td>1219912.0</td>
-      <td>49000000</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>250</th>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>894</td>
-      <td>ZA</td>
-      <td>Zambia</td>
-      <td>Lusaka</td>
-      <td>752614.0</td>
-      <td>13460305</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>251</th>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>716</td>
-      <td>ZI</td>
-      <td>Zimbabwe</td>
-      <td>Harare</td>
-      <td>390580.0</td>
-      <td>13061000</td>
-      <td>AF</td>
-    </tr>
-  </tbody>
-</table>
-<p>252 rows × 9 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([1., 2., 3., 4., 5.], dtype=float32)</pre>
 </div>
 
 </div>
@@ -2794,7 +2636,7 @@ countries</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The table can be manipulated as if it were a dataframe.</p>
+<p>To convert this to raw Python, use the <code>tolist</code> method.</p>
 
 </div>
 </div>
@@ -2820,11 +2662,9 @@ countries</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;# rows = </span><span class="si">{</span><span class="n">countries</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;# columns = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">print(f"# rows = {countries.count()}")
-print(f"# columns = {len(countries.columns)}")</div>
+<div id="cell-4" class="clipboard-copy-txt">x.tolist()</div>
     
         </div>
     </div>
@@ -2842,23 +2682,36 @@ print(f"# columns = {len(countries.columns)}")</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre># rows = 252
-# columns = 9
-</pre>
-</div>
-</div>
 
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[1.0, 2.0, 3.0, 4.0, 5.0]</pre>
 </div>
 
 </div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Secondly, when a JAX function is called, the corresponding operation is dispatched to an accelerator to be computed asynchronously when possible. The returned array is therefore not necessarily ‘filled in’ as soon as the function returns. Thus, if we don’t require the result immediately, the computation won’t block Python execution. If the computation is required - e.g., when using the <code>block_until_ready</code> method, converting to a Numpy array or printing a result, then the call to the computation will be blocking. See <a href="https://jax.readthedocs.io/en/latest/async_dispatch.html#asynchronous-dispatch">Asynchronous dispatch</a> in the JAX docs.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2878,132 +2731,14 @@ print(f"# columns = {len(countries.columns)}")</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">asian_countries</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">countries</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;continent&#39;</span><span class="p">,</span> <span class="s1">&#39;population&#39;</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">countries</span><span class="p">[</span><span class="s1">&#39;continent&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;AS&#39;</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="n">asian_countries</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;population&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">block_until_ready</span><span class="p">()</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">asian_countries = (
-    countries['name', 'continent', 'population']
-    .filter(countries['continent'] == 'AS')
-)
-asian_countries.sort_by(ibis.desc("population")).limit(10)</div>
+<div id="cell-5" class="clipboard-copy-txt">y = jnp.dot(x, x).block_until_ready()</div>
     
         </div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>continent</th>
-      <th>population</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>China</td>
-      <td>AS</td>
-      <td>1330044000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>India</td>
-      <td>AS</td>
-      <td>1173108018</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Indonesia</td>
-      <td>AS</td>
-      <td>242968342</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Pakistan</td>
-      <td>AS</td>
-      <td>184404791</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Bangladesh</td>
-      <td>AS</td>
-      <td>156118464</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Japan</td>
-      <td>AS</td>
-      <td>127288000</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Philippines</td>
-      <td>AS</td>
-      <td>99900177</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Vietnam</td>
-      <td>AS</td>
-      <td>89571130</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Turkey</td>
-      <td>AS</td>
-      <td>77804122</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Iran</td>
-      <td>AS</td>
-      <td>76923300</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -3014,7 +2749,8 @@ asian_countries.sort_by(ibis.desc("population")).limit(10)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="aggregations">Aggregations<a class="anchor-link" href="#aggregations">&#182;</a></h2>
+<p>Jax functions can also work directly with Numpy arrays and it will copy the data to a <code>DeviceArray</code> automatically.</p>
+
 </div>
 </div>
 </div>
@@ -3039,23 +2775,11 @@ asian_countries.sort_by(ibis.desc("population")).limit(10)</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">total_poplation</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">countries</span>
-    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;continent&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
-        <span class="n">countries</span><span class="p">[</span><span class="s2">&quot;population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;total_population&quot;</span><span class="p">)</span>
-    <span class="p">)</span>
-<span class="p">)</span>
-<span class="n">total_poplation</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">x_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="n">jnp</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x_np</span><span class="p">,</span> <span class="n">x_np</span><span class="p">)</span><span class="o">.</span><span class="n">block_until_ready</span><span class="p">()</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">total_poplation = (
-    countries
-    .group_by("continent")
-    .aggregate(
-        countries["population"].sum().name("total_population")
-    )
-)
-total_poplation</div>
+<div id="cell-6" class="clipboard-copy-txt">x_np = np.array([1.0, 2.0, 3.0, 4.0, 5.0])
+jnp.dot(x_np, x_np).block_until_ready()</div>
     
         </div>
     </div>
@@ -3077,68 +2801,9 @@ total_poplation</div>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>continent</th>
-      <th>total_population</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AF</td>
-      <td>1021238685</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AN</td>
-      <td>170</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AS</td>
-      <td>4130584841</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>EU</td>
-      <td>750724554</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>NA</td>
-      <td>540204371</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>OC</td>
-      <td>36067549</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>SA</td>
-      <td>400143568</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>DeviceArray(55., dtype=float32)</pre>
 </div>
 
 </div>
@@ -3155,7 +2820,7 @@ total_poplation</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="joining-data">Joining Data<a class="anchor-link" href="#joining-data">&#182;</a></h2><p>Start by loading another table.</p>
+<h3 id="immutability">Immutability<a class="anchor-link" href="#immutability">&#182;</a></h3><p>Unlike a Numpy array, is isn't possible to mutate an element in a Jax array as it enforces all of the contraints required by functional programming. Jax does, however, allow you to create new arrays from an in intial array, but with the required elements changed as required.</p>
 
 </div>
 </div>
@@ -3181,11 +2846,13 @@ total_poplation</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">gdp</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;gdp&quot;</span><span class="p">)</span>
-<span class="n">gdp</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">q</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt">gdp = connection.table("gdp")
-gdp</div>
+<div id="cell-7" class="clipboard-copy-txt">z = jnp.array([1.0, 2.0, 3.0])
+q = z.at[1].set(-2.0)
+q</div>
     
         </div>
     </div>
@@ -3207,101 +2874,9 @@ gdp</div>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country_code</th>
-      <th>year</th>
-      <th>value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>ABW</td>
-      <td>1986</td>
-      <td>4.054634e+08</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ABW</td>
-      <td>1987</td>
-      <td>4.876025e+08</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ABW</td>
-      <td>1988</td>
-      <td>5.964236e+08</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ABW</td>
-      <td>1989</td>
-      <td>6.953044e+08</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ABW</td>
-      <td>1990</td>
-      <td>7.648871e+08</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>9995</th>
-      <td>SVK</td>
-      <td>2002</td>
-      <td>3.513034e+10</td>
-    </tr>
-    <tr>
-      <th>9996</th>
-      <td>SVK</td>
-      <td>2003</td>
-      <td>4.681659e+10</td>
-    </tr>
-    <tr>
-      <th>9997</th>
-      <td>SVK</td>
-      <td>2004</td>
-      <td>5.733202e+10</td>
-    </tr>
-    <tr>
-      <th>9998</th>
-      <td>SVK</td>
-      <td>2005</td>
-      <td>6.278531e+10</td>
-    </tr>
-    <tr>
-      <th>9999</th>
-      <td>SVK</td>
-      <td>2006</td>
-      <td>7.070810e+10</td>
-    </tr>
-  </tbody>
-</table>
-<p>10000 rows × 3 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>DeviceArray([ 1., -2.,  3.], dtype=float32)</pre>
 </div>
 
 </div>
@@ -3318,7 +2893,8 @@ gdp</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's filter-out all by the most recent year's data.</p>
+<h2 id="random-numbers-and-automatic-vectorisation">Random Numbers and Automatic Vectorisation<a class="anchor-link" href="#random-numbers-and-automatic-vectorisation">&#182;</a></h2><p>Using the function tracing techniques exploited by Jax'x <a href="https://jax.readthedocs.io/en/latest/jax-101/02-jitting.html">Just-in-Time (JIT) compiler</a>, Jax can also automatically vectorise a function, as we will demonstrate below. We start by creating a function that we will want to vectorise.</p>
+<p>Note the application of random number generation in Jax, which is a <a href="https://jax.readthedocs.io/en/latest/jax-101/05-random-numbers.html">departure from NumPy</a>. This requires us to provide a unique 'key' to a RNG algorithm to explicitly manage the state of the RNG (NumPy manages this automatically based on a single seed).</p>
 
 </div>
 </div>
@@ -3344,33 +2920,27 @@ gdp</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">gdp_latest</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">gdp</span>
-    <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="s2">&quot;country_code&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">))</span>
-    <span class="o">.</span><span class="n">mutate</span><span class="p">(</span>
-        <span class="n">latest_year</span><span class="o">=</span><span class="n">gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">(),</span>
-        <span class="n">latest_value</span><span class="o">=</span><span class="n">gdp</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">mean_projection</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute the mean dot product between x and a random vector.&quot;&quot;&quot;</span>
+    <span class="n">rng_keys</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">42</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">projections</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">jnp</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">rng_keys</span><span class="p">]</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s2">&quot;country_code&quot;</span><span class="p">,</span> <span class="s2">&quot;latest_year&quot;</span><span class="p">,</span> <span class="s2">&quot;latest_value&quot;</span><span class="p">])</span>
-    <span class="o">.</span><span class="n">relabel</span><span class="p">({</span><span class="s2">&quot;latest_year&quot;</span><span class="p">:</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;latest_value&quot;</span><span class="p">:</span> <span class="s2">&quot;gdp&quot;</span><span class="p">})</span>
-    <span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
-<span class="p">)</span>
-<span class="n">gdp_latest</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">projections</span><span class="p">)</span>
+
+
+<span class="n">mean_projection</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">gdp_latest = (
-    gdp
-    .group_by("country_code")
-    .order_by(ibis.desc("year"))
-    .mutate(
-        latest_year=gdp["year"].first(),
-        latest_value=gdp["value"].first()
+<div id="cell-8" class="clipboard-copy-txt">def mean_projection(x: jnp.DeviceArray, n: int = 100) -> jnp.DeviceArray:
+    """Compute the mean dot product between x and a random vector."""
+    rng_keys = jax.random.split(jax.random.PRNGKey(42), n)
+    projections = jnp.array(
+        [jnp.dot(x, jax.random.uniform(key, x.shape)) for key in rng_keys]
     )
-    .select(["country_code", "latest_year", "latest_value"])
-    .relabel({"latest_year": "year", "latest_value": "gdp"})
-    .distinct()
-)
-gdp_latest</div>
+    return jnp.mean(projections)
+
+
+mean_projection(x)</div>
     
         </div>
     </div>
@@ -3392,101 +2962,9 @@ gdp_latest</div>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country_code</th>
-      <th>year</th>
-      <th>gdp</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>ABW</td>
-      <td>2017</td>
-      <td>2.700559e+09</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AFG</td>
-      <td>2017</td>
-      <td>2.019176e+10</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AGO</td>
-      <td>2017</td>
-      <td>1.221238e+11</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ALB</td>
-      <td>2017</td>
-      <td>1.302506e+10</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>AND</td>
-      <td>2017</td>
-      <td>3.013387e+09</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>253</th>
-      <td>XKX</td>
-      <td>2017</td>
-      <td>7.227700e+09</td>
-    </tr>
-    <tr>
-      <th>254</th>
-      <td>YEM</td>
-      <td>2017</td>
-      <td>2.681870e+10</td>
-    </tr>
-    <tr>
-      <th>255</th>
-      <td>ZAF</td>
-      <td>2017</td>
-      <td>3.495541e+11</td>
-    </tr>
-    <tr>
-      <th>256</th>
-      <td>ZMB</td>
-      <td>2017</td>
-      <td>2.586814e+10</td>
-    </tr>
-    <tr>
-      <th>257</th>
-      <td>ZWE</td>
-      <td>2017</td>
-      <td>2.281301e+10</td>
-    </tr>
-  </tbody>
-</table>
-<p>258 rows × 3 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>DeviceArray(7.5951915, dtype=float32)</pre>
 </div>
 
 </div>
@@ -3503,32 +2981,7 @@ gdp_latest</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Note, the above query is identicle to one with explicit window functions,</p>
-<div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">group_by</span><span class="o">=</span><span class="n">gdp</span><span class="p">[</span><span class="s2">&quot;country_code&quot;</span><span class="p">],</span> <span class="n">order_by</span><span class="o">=</span><span class="n">ibis</span><span class="o">.</span><span class="n">desc</span><span class="p">(</span><span class="n">gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]))</span>
-
-<span class="n">latest_gdp</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">gdp</span>
-    <span class="o">.</span><span class="n">mutate</span><span class="p">(</span>
-        <span class="n">latest_value</span><span class="o">=</span><span class="n">gdp</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">w</span><span class="p">),</span>
-        <span class="n">latest_year</span><span class="o">=</span><span class="n">gdp</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
-    <span class="p">)</span>
-    <span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s2">&quot;country_code&quot;</span><span class="p">,</span> <span class="s2">&quot;latest_year&quot;</span><span class="p">,</span> <span class="s2">&quot;latest_value&quot;</span><span class="p">])</span>
-    <span class="o">.</span><span class="n">relabel</span><span class="p">({</span><span class="s2">&quot;latest_year&quot;</span><span class="p">:</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;latest_value&quot;</span><span class="p">:</span> <span class="s2">&quot;gdp&quot;</span><span class="p">})</span>
-    <span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
-<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Join with coutries table.</p>
+<p>We can vectorise this function using Jax's <code>vmap</code> function.</p>
 
 </div>
 </div>
@@ -3554,21 +3007,15 @@ gdp_latest</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">countries_gdp</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">countries</span>
-    <span class="o">.</span><span class="n">inner_join</span><span class="p">(</span><span class="n">gdp_latest</span><span class="p">,</span> <span class="n">countries</span><span class="p">[</span><span class="s2">&quot;iso_alpha3&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">gdp_latest</span><span class="p">[</span><span class="s2">&quot;country_code&quot;</span><span class="p">])</span>
-    <span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s2">&quot;country_code&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;continent&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="s2">&quot;gdp&quot;</span><span class="p">])</span>
-<span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">mean_projection_vect</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">vmap</span><span class="p">(</span><span class="n">mean_projection</span><span class="p">)</span>
 
-<span class="n">countries_gdp</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">])</span>
+<span class="n">mean_projection_vect</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt">countries_gdp = (
-    countries
-    .inner_join(gdp_latest, countries["iso_alpha3"] == gdp_latest["country_code"])
-    .select(["country_code", "name", "continent", "population", "gdp"])
-)
+<div id="cell-9" class="clipboard-copy-txt">mean_projection_vect = jax.vmap(mean_projection)
 
-countries_gdp</div>
+xs = jnp.stack([x, x, x])
+mean_projection_vect(xs)</div>
     
         </div>
     </div>
@@ -3590,125 +3037,9 @@ countries_gdp</div>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country_code</th>
-      <th>name</th>
-      <th>continent</th>
-      <th>population</th>
-      <th>gdp</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AND</td>
-      <td>Andorra</td>
-      <td>EU</td>
-      <td>84000</td>
-      <td>3.013387e+09</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ARE</td>
-      <td>United Arab Emirates</td>
-      <td>AS</td>
-      <td>4975593</td>
-      <td>3.777011e+11</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AFG</td>
-      <td>Afghanistan</td>
-      <td>AS</td>
-      <td>29121286</td>
-      <td>2.019176e+10</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ATG</td>
-      <td>Antigua and Barbuda</td>
-      <td>NA</td>
-      <td>86754</td>
-      <td>1.467978e+09</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ALB</td>
-      <td>Albania</td>
-      <td>EU</td>
-      <td>2986952</td>
-      <td>1.302506e+10</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>206</th>
-      <td>XKX</td>
-      <td>Kosovo</td>
-      <td>EU</td>
-      <td>1800000</td>
-      <td>7.227700e+09</td>
-    </tr>
-    <tr>
-      <th>207</th>
-      <td>YEM</td>
-      <td>Yemen</td>
-      <td>AS</td>
-      <td>23495361</td>
-      <td>2.681870e+10</td>
-    </tr>
-    <tr>
-      <th>208</th>
-      <td>ZAF</td>
-      <td>South Africa</td>
-      <td>AF</td>
-      <td>49000000</td>
-      <td>3.495541e+11</td>
-    </tr>
-    <tr>
-      <th>209</th>
-      <td>ZMB</td>
-      <td>Zambia</td>
-      <td>AF</td>
-      <td>13460305</td>
-      <td>2.586814e+10</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>ZWE</td>
-      <td>Zimbabwe</td>
-      <td>AF</td>
-      <td>13061000</td>
-      <td>2.281301e+10</td>
-    </tr>
-  </tbody>
-</table>
-<p>211 rows × 5 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>DeviceArray([7.5951915, 7.5951915, 7.5951915], dtype=float32)</pre>
 </div>
 
 </div>
@@ -3725,7 +3056,19 @@ countries_gdp</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="reading-and-writing-data">Reading and Writing Data<a class="anchor-link" href="#reading-and-writing-data">&#182;</a></h2><p>We can also create and tables (and likewise views) via Ibis.</p>
+<p>Note, that if we wanted to distribute the vectorisation across devices (e.g., GPU and/or TPU cores), then we would use the <code>pmap</code> function instead of <code>vmap</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="mapping-over-ragged-collections-with-pytrees">Mapping over Ragged Collections with <code>pytrees</code><a class="anchor-link" href="#mapping-over-ragged-collections-with-pytrees">&#182;</a></h2><p>Jax will allow you to map a function over an arbitariilty nested set of collections.</p>
 
 </div>
 </div>
@@ -3751,15 +3094,13 @@ countries_gdp</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">if</span> <span class="s2">&quot;countries_gdp&quot;</span> <span class="ow">in</span> <span class="n">connection</span><span class="o">.</span><span class="n">list_tables</span><span class="p">():</span>
-    <span class="n">connection</span><span class="o">.</span><span class="n">drop_table</span><span class="p">(</span><span class="s2">&quot;countries_gdp&quot;</span><span class="p">)</span>
-<span class="n">connection</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;countries_gdp&quot;</span><span class="p">,</span> <span class="n">countries_gdp</span><span class="p">)</span>
-<span class="n">connection</span><span class="o">.</span><span class="n">list_tables</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">)],</span> <span class="s2">&quot;bar&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]}}</span>
+
+<span class="n">jax</span><span class="o">.</span><span class="n">tree_map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="n">params</span><span class="p">)</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">if "countries_gdp" in connection.list_tables():
-    connection.drop_table("countries_gdp")
-connection.create_table("countries_gdp", countries_gdp)
-connection.list_tables()</div>
+<div id="cell-10" class="clipboard-copy-txt">params = {"foo": [1.0, 2, 3, ("2", "3")], "bar": {"1": [2.0, "3"]}}
+
+jax.tree_map(lambda e: float(e), params)</div>
     
         </div>
     </div>
@@ -3783,7 +3124,7 @@ connection.list_tables()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;countries&#39;, &#39;countries_gdp&#39;, &#39;gdp&#39;, &#39;independence&#39;]</pre>
+<pre>{&#39;bar&#39;: {&#39;1&#39;: [2.0, 3.0]}, &#39;foo&#39;: [1.0, 2.0, 3.0, (2.0, 3.0)]}</pre>
 </div>
 
 </div>
@@ -3800,27 +3141,17 @@ connection.list_tables()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="working-with-temporary-views-and-sql">Working with Temporary Views and SQL<a class="anchor-link" href="#working-with-temporary-views-and-sql">&#182;</a></h2><p>It also possible to express queries using SQL. This isn't implemented for the SQLite backend, but otherwise would look like,</p>
-<div class="highlight"><pre><span></span><span class="n">continent_gdp</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">countries_gdp</span>
-    <span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;countries_gdp&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT continent, sum(gdp) FROM countries_gdp GROUPBY continent&quot;</span><span class="p">)</span>
-<span class="p">)</span>
+<h2 id="auto-differentiation">Auto-Differentiation<a class="anchor-link" href="#auto-differentiation">&#182;</a></h2><p>Auto-differentiation is Jax follows a functional programming paradigm. For example, consider the following example from PyTorch,</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">y</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<span class="n">x</span><span class="o">.</span><span class="n">grad</span>
+
+<span class="c1"># tensor(4.)</span>
 </pre></div>
-<p>Where the <code>alias</code> command creates a temporary view within the database.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="lazy-evaluation-and-converting-to-pandas-dataframe">Lazy Evaluation and Converting to Pandas DataFrame<a class="anchor-link" href="#lazy-evaluation-and-converting-to-pandas-dataframe">&#182;</a></h2><p>If we make <code>ibis.options.interactive = False</code>, then Ibis will only return interim table metadata untill we call the <code>execute</code> method, much like Apache Spark.</p>
-<p>The <code>execute</code> method can also be used with eager evaluation to return a dataframe.</p>
+<p>This pattern is imperative and functional. In Jax this would be implemented as follows,</p>
 
 </div>
 </div>
@@ -3846,21 +3177,275 @@ connection.list_tables()</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ibis</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">interactive</span> <span class="o">=</span> <span class="kc">False</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">x_squared</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(df) = </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;df:&quot;</span><span class="p">)</span>
-<span class="n">df</span>
+<span class="n">x_squared_dx</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">x_squared</span><span class="p">)</span>
+<span class="n">x_squared_dx</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">ibis.options.interactive = False
+<div id="cell-11" class="clipboard-copy-txt">def x_squared(x: jnp.DeviceArray) -> jnp.DeviceArray:
+    return x**2
 
-df = countries.execute()
 
-print(f"type(df) = {type(df)}")
-print("df:")
-df</div>
+x_squared_dx = jax.grad(x_squared)
+x_squared_dx(jnp.array(2.0))</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>DeviceArray(4., dtype=float32, weak_type=True)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can easily extrapolate this example to a simple gradient descent problem.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-12">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+
+<span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">eta</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">)</span>
+<span class="n">x_hist</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_iterations</span><span class="p">)):</span>
+    <span class="n">x_hist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">tolist</span><span class="p">()))</span>
+    <span class="n">x</span> <span class="o">-=</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">jax</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">f</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_hist</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">]))</span>
+</pre></div>
+<div id="cell-12" class="clipboard-copy-txt">def f(x: jnp.DeviceArray) -> jnp.DeviceArray:
+    return (x - 2) ** 2
+
+
+n_iterations = 50
+eta = 0.1
+
+x = jnp.array(-3.5)
+x_hist: List[Tuple[int, float]] = []
+
+for n in tqdm(range(n_iterations)):
+    x_hist.append((n, x.tolist()))
+    x -= eta * jax.grad(f)(x)
+
+print(f"x = {x:.2f}")
+_ = sns.lineplot(y="x", x="n", data=pd.DataFrame(x_hist, columns=["n", "x"]))</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>100%|██████████| 50/50 [00:00&lt;00:00, 847.60it/s]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>x = 2.00
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjUAAAGwCAYAAABRgJRuAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjYuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8o6BhiAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAuoklEQVR4nO3deXzU9b3v8ffMJDPZE0JCAmQBZFFEUBFocAOlim09VbvYU9uK9dpqoVfF6y3enor2nj7goV5vrcdbbT2VLtalC9raunBccGORJQoqYRFIWJKwZs8kM/O9f0wyJLKYZWZ+8/vN6/l4/B4z85vfDB+/ovN+fJff12WMMQIAALA5t9UFAAAARAOhBgAAOAKhBgAAOAKhBgAAOAKhBgAAOAKhBgAAOAKhBgAAOEKK1QXEUygU0r59+5SdnS2Xy2V1OQAAoA+MMWpqatKIESPkdp+8PyapQs2+fftUWlpqdRkAAGAAampqVFJSctL3kyrUZGdnSwo3Sk5OjsXVAACAvmhsbFRpaWnkd/xkkirUdA855eTkEGoAALCZz5o6wkRhAADgCIQaAADgCIQaAADgCIQaAADgCIQaAADgCIQaAADgCIQaAADgCIQaAADgCIQaAADgCIQaAADgCLYJNUuWLNG0adOUnZ2tYcOG6aqrrlJVVZXVZQEAgARhm1CzcuVKzZ8/X6tXr9aKFSvU2dmpyy67TC0tLVaXBgAAEoDLGGOsLmIgDhw4oGHDhmnlypW66KKL+vSZxsZG5ebmqqGhgQ0tASDGjDEyRjI9X0eeS92vev4K9Tzf872e3xF571PXKHLt8Z/vef3Jvqd37Z96faKrjrumb/ryq3vCP29A3xM9fY0LBVk+paV6ovgn9/3327a7dDc0NEiS8vPzT3qN3++X3++PvG5sbIx5XQASmzFGHcGQOgIh+QMhdQZD6gyEzwVCPZ4HQ+oMmvD7wZACofDzYMgoEDQKhEz4+qBRMPLY4zAmcm3IhK8NhqRg12PIHLsu1PWZkDl2PtQVCHo9N+HnIRP+5wgZo1DXd5muz4a6gkOv16YrLHR/Vt3fcex7uj8TCR5dYcT0fE89QsqnXve8Dsntd9+drovGF1ryZ9sy1IRCId122206//zzNWnSpJNet2TJEt17771xrAzAQAWCIbX4g2ryd6q1I9h1BNTqD6q1M6i2jkDkfFtHUG2dQbV3BtXeGZI/0POx97mOQCgSYrqfA33lcvV43qfrj7/qRJ87wWUn+FyfLoqKKH2NJMndl3+4GLHl8NMtt9yiF198UW+//bZKSkpOet2JempKS0sZfgJiwB8IqqGtUw2tneHHHsfRrnONbZ1q8gfU3B5Qsz98NLUH1OIPqK0zaEndqR6XUj3uHofrU49upXhcSnWHHz3u8Pnwo0set1up7vB5j9ulFI9LKW633C5X5HqPq+s9t0tu97FzLpcin3O7jj/vdoWvd7vCPxThI/yeq9e58Hl96jqXK/wj63aFfx67PyOFH13d1+jY9dKx7+7+jKvrnHTsOz/9XtdHe1+r3td2fXvkF7TndepxrT59vY4PAZ9+/9PXuHpd6zrJ+RNfg8Tj2OGnBQsW6IUXXtCbb755ykAjST6fTz6fL06VAc5ijFFje0B1je2qb/TrUItfB5s7dLjFr0PNHceet3TocHOHmvyBqPy53hS3Mr0eZXhTlOH1KMPrUXrX63SvRxmp4XNpXo/SUjxKS/UoLdUdefSldL1O8cjX9dqb4pbX4w4/dh+e8OF282MGOIVtQo0xRj/84Q+1fPlyvfHGGxo9erTVJQG2ZYzRkdZO1Rxu1d6jbaptaFddY7tqG9sjz+sa/f3uPXG5pJy0VOVlpCo3PXzkpKcqL/3Y6+y0VGWlpSjbl6KstBRlelOUnZaiLF+KMn0p8qbYZlEmgARjm1Azf/58/fGPf9Tzzz+v7Oxs1dbWSpJyc3OVnp5ucXVA4vEHgqo53Kaaw62qOdKq6kOtqj7cqpoj4XPNfexZyU1PVVGOTwVZPuVneiOPQ7O8Gprp1dAsX/gx06fstBR6PgBYxjZzak423vnEE09o3rx5ffoOlnTDido6gtpxoFnb65u1rb5J2+rCz3cdalHoM/7rLsrxaWReuobnpqsoJ01FOT4V56apKCdNxTnhx3RvdJdmAkB/OW5OjU2yFxAzxhjtPdqmTXsa9MHeBm2tbdK2+mbVHGk96TLaTK9HpfkZKsvPiDyGn6erZEhG1O8lAQBWsk2oAZLNgSa/PthzVO/vadAHe45q054GHWrpOOG1eRmpGj8sW2OLsjRuWJbGDcvWuKIsDcv2saoDQNIg1AAJIBQy2lrfpFU7DmnNJ4f1/p6j2t/Qftx1KW6XJhRna3JJriYOz9HYrvAyNNNLeAGQ9Ag1gAWMMdp5sEWrPjmkd3cc0uodh47rhXG5pLGFWTqrJFdTSvI0uSRXZwzPYcgIAE6CUAPESX1Tu1ZWHdCqHeEgU9vYuycmPdWj80YNUcVpQ3Vu2RBNGpmrLB//iQJAX/F/TCCG9hxp1Uuba/Xyh7Vat/tIrwm9Xo9b55bnqWJMgWaOHaopJXncowUABoFQA0TZ9vpmvfxhrV7aXKtNext6vTelJFcXjitUxWlDNbV8CENJABBFhBogCrbWNenv7+/Ti5trtb2+OXLe7ZKmj87X3DOLddmZxRqRx40iASBWCDXAALV3BvWPD/brqbXVWrf7SOR8qsel88cWaO6ZxZozsUgFWew/BgDxQKgB+mlbXZP+uLZaf92wVw1tnZLCuybPnjBMX5o8XLNPH6bc9FSLqwSA5EOoAfqgvTOoFzfv1x/XVOu9Xcd6ZUbmpetfp5fq6+eValhOmoUVAgAINcAp1De16/G3durZdTU62nqsV+bS04fpmzPKdOG4QnnYwBEAEgKhBjiBA01+PbZyh/6wZrfaO0OSwr0y104L98oU59IrAwCJhlAD9HCgya9fvblDv199LMycXZqnH14yVrMmDKNXBgASGKEGkHSw2a9fvfmJfrdqV68wc9uccbp4fCH7KgGADRBqkNQONvv16zc/0e9W7VZbZ1CSNKUrzMwizACArRBqkJQCwZCWvbtLD67YqtaOrjBTkqvb5ozXrAmEGQCwI0INks6mPQ26a/kH2ry3UZJ01shc3f75cZo9YRhhBgBsjFCDpNHsD+jBV7Zq2bs7FTJSTlqK/tcXztDXzyuVmwnAAGB7hBokhRUf1Wnx85u1r6FdkvTls0fo3744UYXZbGEAAE5BqIGj1Ta0656/faiXPqyVJJXmp+vfrzpLF48vtLgyAEC0EWrgSKGQ0e9X79b9L1ep2R9Qitulmy4ao/9+yTilez1WlwcAiAFCDRznaGuHbn26Uiu3HpAknVOWpyXXnKXTi3MsrgwAEEuEGjjK5r0NuvkP67XnSJvSUt368RfO0HUzypkIDABJgFADx/jz+j368fJN8gdCKsvP0KPfmqqJI+idAYBkQaiB7fkDQf307x/pyTXVkqRLTh+m//v1s5WbkWpxZQCAeCLUwNb2N7Tplj9sUGXNUblc0m2XjtcPLxnLcBMAJCFCDWzr3R0H9cM/btShlg7lpqfq5984W7MnDLO6LACARQg1sB1jjH791ida+uIWhYw0cXiOHv3WVJUNzbC6NACAhQg1sJVgyOh//vkD/WXDHknSNeeO1M+uOot7zwAACDWwj0AwpIXPvq+/vb9PHrdL91w5Ud/6XDmbUAIAJBFqYBOdwZBufXqj/rmpVilul/7jm+do7qThVpcFAEgghBokvI5ASD98aoNe/rBOqR6X/t91U/X5iUVWlwUASDCEGiQ0fyCo+U9u0H99XC9viluPfWuqZp/OCicAwPEINUhY7Z1B3fyH9Xqj6oB8KW79+jvn6SJ21wYAnAShBgmprSOo7/1+nd7adlBpqW795/XTdP7YAqvLAgAkMEINEk5rR0A3LlunVZ8cUobXo9/Mm6bPjRlqdVkAgARHqEFCafYH9N0n3tPaXYeV5UvRshum6bxR+VaXBQCwAUINEkZHIKTvLgsHmmxfin5743SdWzbE6rIAADZBqEFCMMZo8d82a+3OcKD5w3+boSmleVaXBQCwEbfVBQCS9PvVu/XU2hq5XNIv/vUcAg0AoN8INbDcuzsO6t6/fyRJ+tHc07kPDQBgQAg1sFTN4VbNf3KDgiGjq84eoe9fNMbqkgAANkWogWVa/AHd9Lt1OtLaqckluVr6lclsTgkAGDBCDSwRChktfLZSW2qbVJDl02Pfnqq0VI/VZQEAbIxQA0s89Oo2vfxhnbwetx779lQNz023uiQAgM0RahB3L27ar4de3SZJ+verJ2lqOfeiAQAMHqEGcfXx/kYtfPZ9SdIN54/S188rtbgiAIBTEGoQN4dbOnTT79aprTOoC8YW6MdfOMPqkgAADkKoQVwEQ0Y/eHK99hxpU/nQDP3HN89Rioe/fgCA6OFXBXHxxDs7tfqTw8r0evTr75ynvAyv1SUBABzGVqHmzTff1JVXXqkRI0bI5XLpueees7ok9MGugy164JUqSdK/fWmixhdlW1wRAMCJbBVqWlpaNGXKFD3yyCNWl4I+CoWMFv31A7V3hjTztKH6xjQmBgMAYsNWu3RfccUVuuKKK6wuA/3w1HvVWv3JYaWnerT0Gu4YDACIHVuFmv7y+/3y+/2R142NjRZWk3z2HW3Tkn9ukSTdefkElQ3NsLgiAICT2Wr4qb+WLFmi3NzcyFFaytBHvBhj9OPlm9TsD+jcsjxdP3OU1SUBABzO0aHmrrvuUkNDQ+SoqamxuqSksXzjXr1edUBej1v3fXWyPG6GnQAAseXo4Sefzyefz2d1GUnnQJNfP33hI0nSrXPGaewwVjsBAGLP0T01sMbiv23W0dZOTRyeo+9dNMbqcgAAScJWPTXNzc3avn175PXOnTtVWVmp/Px8lZWVWVgZur20eb/+ualWHrdL9311slK5azAAIE5sFWrWrVun2bNnR14vXLhQknT99ddr2bJlFlWFbkdbO/Rvz30oSbr54jGaNDLX4ooAAMnEVqFm1qxZMsZYXQZO4n+/8LEONvt1WmGmfnjJOKvLAQAkGcYGEBWvV9XrLxv2yOWS7vvqFKWleqwuCQCQZAg1GLRmf0A//usmSdK8maM0tXyIxRUBAJIRoQaD9us3P9G+hnaV5qfrzssnWF0OACBJEWowKIdbOvT4W59IkhbNPUMZXltN0wIAOAihBoPyyze2q6UjqDNH5OiKScVWlwMASGKEGgxYbUO7frdqtyTpf1w+QW62QgAAWIhQgwF7+LVt8gdCmjZqiGaNL7S6HABAkiPUYECqD7XqmffCG4T+j8smyOWilwYAYC1CDQbk5/+1VYGQ0UXjCzVjzFCrywEAgFCD/tta16TllXslSXdexhJuAEBiINSg3/7PK1UyRrpiUrHOKmF/JwBAYiDUoF/erzmqlz+sk8slLfz8eKvLAQAgglCDfnnglSpJ0tXnjNS4omyLqwEA4BhCDfps1Y5DemvbQaV6XLp9Dr00AIDEQqhBnxhjIr0035hWptL8DIsrAgCgN0IN+uSNqgNav/uIfCluLbhkrNXlAABwHEINPlMoZHT/y+FemnkzR6koJ83iigAAOB6hBp/pn5v366P9jcrypejmi0+zuhwAAE6IUINTCgRDevCVrZKkmy4coyGZXosrAgDgxAg1OKXnKvfpk4MtGpKRqu9eMMrqcgAAOClCDU7KGKMn3tkpSbrpojHKTku1uCIAAE6OUIOT2lB9VB/ua5Qvxa1/nVZmdTkAAJwSoQYn9ftVuyRJV04ZwVwaAEDCI9TghA42+/XPTbWSpO9UlFtcDQAAn41QgxN65r0adQRDmlKap8kleVaXAwDAZyLU4DiBYEhPrt4tSfrO5+ilAQDYA6EGx3l1S732NbQrP9OrL04ebnU5AAD0CaEGx/n9qnAvzdfPK1VaqsfiagAA6BtCDXrZcaBZb28/KJdLum4Gy7gBAPZBqEEv3b00l54+TKX5GRZXAwBA3xFqENHiD+gv6/dIkr5dMcraYgAA6CdCDSKeq9yrJn9Ao4Zm6MKxBVaXAwBAvxBqICm8z1P30NO3Plcut9tlcUUAAPQPoQaSpPd2HdGW2ialpbr1tamlVpcDAEC/EWogSfpd1z5PV509UrkZ7MYNALAfQg1U39iulzaH93n6Nvs8AQBsilADPbW2RoGQ0dTyITpzRK7V5QAAMCCEmiTXGQzpj2u79nmilwYAYGOEmiS34qM61TX6VZDl1dxJxVaXAwDAgBFqklz3BOFvTCuTL4V9ngAA9kWoSWJb65q0+pPDcrukb7LPEwDA5gg1SezJ1eG5NJ+fWKQReekWVwMAwOAQapJUIBjSCx/slyR9cwYThAEA9keoSVJrdh7WoZYODclI1fmnDbW6HAAABo1Qk6T+sSncSzN3UrFSPPw1AADYH79mSSgQDEXuIPzFs0ZYXA0AANFBqElCqz85rMMtHcrP9OpzY/KtLgcAgKgg1CSh7qGny89k6AkA4Bz8oiWZQDCklz8MDz19afJwi6sBACB6CDVJpufQ04zRDD0BAJzDdqHmkUce0ahRo5SWlqYZM2Zo7dq1VpdkK//YtE8Sq54AAM5jq1+1Z555RgsXLtTixYu1YcMGTZkyRZdffrnq6+utLs0WOnutemLoCQDgLLYKNQ8++KBuuukm3XDDDZo4caIeffRRZWRk6De/+Y3VpdnC6k8O6Uhrp4Yy9AQAcCDbhJqOjg6tX79ec+bMiZxzu92aM2eOVq1adcLP+P1+NTY29jqS2T+6tkW4nKEnAIAD2eaX7eDBgwoGgyoqKup1vqioSLW1tSf8zJIlS5Sbmxs5SktL41FqQursueqJoScAgAPZJtQMxF133aWGhobIUVNTY3VJllm1Izz0VJDl1XSGngAADpRidQF9VVBQII/Ho7q6ul7n6+rqVFxcfMLP+Hw++Xy+eJSX8CJDT9xwDwDgULb5dfN6vZo6dapeffXVyLlQKKRXX31VFRUVFlaW+DqDIb38UdeqJ264BwBwKNv01EjSwoULdf311+u8887T9OnT9fOf/1wtLS264YYbrC4tob2745COdg09zRg91OpyAACICVuFmmuvvVYHDhzQ3XffrdraWp199tl66aWXjps8jN7+2TX0NHdSsTxul8XVAAAQG7YKNZK0YMECLViwwOoybKMzGNJLH3bfcG+ExdUAABA7tplTg4F5Z/tBNbR1qiDLx6onAICjEWoc7p+bwkNPVzD0BABwOEKNg4VvuBdeAv8FbrgHAHA4Qo2DMfQEAEgmhBoH677h3hfOYugJAOB8hBqH6ggc2+uJoScAQDIg1DjUOzsOqrE9oMJsn6aNYugJAOB8hBqH6h56YtUTACBZEGocKBgy+q+PWfUEAEguhBoH2ry3QUdbO5WdlqLzyodYXQ4AAHFBqHGgt7cflCRVjBmqFA//igEAyYFfPAd6pyvUXDCuwOJKAACIH0KNw7R1BLVu1xFJ0gVjCTUAgORBqHGY93YdVkcwpBG5aRpdkGl1OQAAxA2hxmHe7jH05HKxlBsAkDwINQ7z9rZwqDmfoScAQJIh1DjIwWa/PtrfKIlQAwBIPoQaB3l3xyFJ0hnDc1SQ5bO4GgAA4otQ4yBvbzsgSbpg7FCLKwEAIP4INQ5hjInMp7lgXKHF1QAAEH+EGofYebBF+xra5fW4NZ1duQEASYhQ4xDddxGeWj5E6V6PxdUAABB/hBqHeJutEQAASY5Q4wCBYCiy8omtEQAAyYpQ4wCb9jaoqT2g3PRUTRqZa3U5AABYglDjAN2rnmaeNlQeN1sjAACSE6HGAbrn03AXYQBAMiPU2FyLP6AN1UckSRcySRgAkMQINTa3dtdhdQaNSoakqyw/w+pyAACwDKHG5rrn01w4rkAuF/NpAADJi1Bjc+8wnwYAAEmEGlurb2rXltomuVzSzNMINQCA5EaosbF3t4dvuHfmiBzlZ3otrgYAAGsRamyMpdwAABxDqLEpY8yxScJjCy2uBgAA6xFqbGrHgRbVNrbLm+LWeaOGWF0OAACWI9TY1NvbDkiSpo/KV1qqx+JqAACwXr9Dzeuvv37S9x577LFBFYO+e7trkjDzaQAACOt3qJk7d67uvPNOdXZ2Rs4dPHhQV155pRYtWhTV4nBincGQVn8SDjVsjQAAQNiAemqWL1+uadOm6aOPPtI//vEPTZo0SY2NjaqsrIxBifi0D/YcVbM/oCEZqZo4PMfqcgAASAj9DjUzZ85UZWWlJk2apHPPPVdXX321br/9dr3xxhsqLy+PRY34lLe6Vj3NHFsgt5utEQAAkAY4UXjr1q1at26dSkpKlJKSoqqqKrW2tka7NpxE99YIFzCfBgCAiH6HmqVLl6qiokKf//zntXnzZq1du1YbN27U5MmTtWrVqljUiB5a/AFtrD4qiVADAEBP/Q41Dz30kJ577jk9/PDDSktL06RJk7R27Vpdc801mjVrVgxKRE/v7zmqQMhoZF66SvMzrC4HAICEkdLfD2zatEkFBb17CFJTU3X//ffrS1/6UtQKw4lV1hyVJJ1dlmdpHQAAJJp+99R8OtD0dPHFFw+qGHy2yq6hp7NL8iytAwCARMMdhW3EGENPDQAAJ0GosZH9De2qb/LL43Zp0ohcq8sBACChEGps5P2uXprTi7OV7mW/JwAAeiLU2Ej30NOU0jxL6wAAIBERamxkY/d8GkINAADHsU2o+dnPfqaZM2cqIyNDeXl5VpcTd4FgSJv2NEiSziHUAABwHNuEmo6ODn3ta1/TLbfcYnUplthW36y2zqCyfSk6rTDL6nIAAEg4/b75nlXuvfdeSdKyZcv6/Bm/3y+/3x953djYGO2y4qZ7Ps3k0lw2sQQA4ARs01MzEEuWLFFubm7kKC0ttbqkAeu+6d4UbroHAMAJOTrU3HXXXWpoaIgcNTU1Vpc0YJVMEgYA4JQsDTWLFi2Sy+U65bFly5YBf7/P51NOTk6vw46a/QFtrW+SxJ2EAQA4GUvn1Nxxxx2aN2/eKa8ZM2ZMfIpJYJv2NMgYaWReuoZlp1ldDgAACcnSUFNYWKjCwkIrS7CFYzfdY2sEAABOxjarn6qrq3X48GFVV1crGAyqsrJSkjR27FhlZTl7iXNlzRFJzKcBAOBUbBNq7r77bv32t7+NvD7nnHMkSa+//rpmzZplUVXxcWyS8BBrCwEAIIHZZvXTsmXLZIw57nB6oNnf0Ka6xq6duUfac6IzAADxYJtQk6y6d+YeX5StDK9tOtYAAIg7Qk2CYxNLAAD6hlCT4LrvJMwmlgAAnBqhJoEFQ0ab9oZ35uamewAAnBqhJoFtrWtSa0dQWezMDQDAZyLUJLDuScJnjcyVh525AQA4JUJNAovcn4ahJwAAPhOhJoGxMzcAAH1HqElQLf6AttaFd+Zm5RMAAJ+NUJOgNu1tUMhIw3PTNCyHnbkBAPgshJoExdATAAD9Q6hJUN033SPUAADQN4SaBEVPDQAA/UOoSUC1De2qbWyX2yVNGplrdTkAANgCoSYBVfbYmTvTx87cAAD0BaEmAXWHmnO46R4AAH1GqElAlTVHJDGfBgCA/iDUJJhgyGjTnq6duUuHWFwNAAD2QahJMNvqm9TSEVSm16Oxw9iZGwCAviLUJJjIztwl7MwNAEB/EGoSzLH70zD0BABAfxBqEsxG7iQMAMCAEGoSSM+duQk1AAD0D6EmgWzu2pm7OCdNxbnszA0AQH8QahLIx/sbJUmTRuZYXAkAAPZDqEkgVXXNkqQJxdkWVwIAgP0QahJI93ya8UWEGgAA+otQkyCMMZFQQ08NAAD9R6hJELWN7WpqDyjF7dKYAu4kDABAfxFqEkRVbbiXZnRBprwp/GsBAKC/+PVMEMynAQBgcAg1CaKqNrzyiVADAMDAEGoSxLb67knCzKcBAGAgCDUJIBQyDD8BADBIhJoEUHOkVe2dIXlT3Cofmml1OQAA2BKhJgF0r3waW5glj9tlcTUAANgToSYBcNM9AAAGj1CTALbWsfIJAIDBItQkgGM9Nax8AgBgoAg1FusMhrTjAD01AAAMFqHGYrsOtqgzaJTp9WhkXrrV5QAAYFuEGotVdQ09jSvKlsvFyicAAAaKUGOxrV3LuScw9AQAwKAQaiwWWfnEcm4AAAaFUGOxyMonemoAABgUQo2F2juD2nWoRZI0nuXcAAAMCqHGQtvrmxUyUl5GqgqzfFaXAwCArRFqLNRzZ25WPgEAMDiEGgt1TxJmPg0AAINHqLFQpKeGlU8AAAyaLULNrl27dOONN2r06NFKT0/XaaedpsWLF6ujo8Pq0galinvUAAAQNSlWF9AXW7ZsUSgU0mOPPaaxY8dq8+bNuummm9TS0qIHHnjA6vIGpKm9U3uPtkmSxhex8gkAgMGyRaiZO3eu5s6dG3k9ZswYVVVV6Ze//OUpQ43f75ff74+8bmxsjGmd/bGtPjyfZli2T3kZXourAQDA/mwx/HQiDQ0Nys/PP+U1S5YsUW5ubuQoLS2NU3WfbVv3TfeYTwMAQFTYMtRs375dDz/8sL7//e+f8rq77rpLDQ0NkaOmpiZOFX62qtqu7RGYTwMAQFRYGmoWLVokl8t1ymPLli29PrN3717NnTtXX/va13TTTTed8vt9Pp9ycnJ6HYmC7REAAIguS+fU3HHHHZo3b94prxkzZkzk+b59+zR79mzNnDlTv/rVr2JcXWxVsZwbAICosjTUFBYWqrCwsE/X7t27V7Nnz9bUqVP1xBNPyO225ciZJOlIS4cONIUnMI8bxsonAACiwRarn/bu3atZs2apvLxcDzzwgA4cOBB5r7i42MLKBqZ76KlkSLoyfbb4VwAAQMKzxS/qihUrtH37dm3fvl0lJSW93jPGWFTVwDGfBgCA6LPFGM68efNkjDnhYUfMpwEAIPpsEWqcZmstG1kCABBthJo4M8Yc66kh1AAAEDWEmjirb/Kroa1Tbpc0pjDT6nIAAHAMQk2cdU8SHlWQqbRUj8XVAADgHISaOKuqZeUTAACxQKiJs63MpwEAICYINXFWVde18onl3AAARBWhJo5CIaNtkZ4atkcAACCaCDVxtPdom1o7gvJ63CofysonAACiiVATR93zacYUZirVQ9MDABBN/LLGUfdN95hPAwBA9BFq4mhrLSufAACIFUJNHEVWPhFqAACIOkJNnASCIe04EA419NQAABB9hJo42X24VR2BkNJTPSoZkm51OQAAOA6hJk6OzafJktvtsrgaAACch1ATJ1u75tOMY+gJAICYINTEya5DLZLC96gBAADRR6iJk91doaY8n1ADAEAsEGripPpwqySpfGiGxZUAAOBMhJo4aPYHdLC5Q5JURqgBACAmCDVxUH0o3EszJCNVOWmpFlcDAIAzEWrioPpweD5NGTtzAwAQM4SaONjd1VNTns/QEwAAsUKoiYPdTBIGACDmCDVx0D2npoyeGgAAYoZQEwe7u+bUlDOnBgCAmCHUxFhHIKS9R9okMfwEAEAsEWpibO/RNoWMlJbq1rBsn9XlAADgWISaGOveHqEsP0MuF7tzAwAQK4SaGOveHqGMPZ8AAIgpQk2Mdd+jZhTzaQAAiClCTYxFbrxHqAEAIKYINTHGFgkAAMQHoSaGjDGROTVskQAAQGwRamKovsmv9s6QPG6XRg5Jt7ocAAAcjVATQ93zaUbkpSnVQ1MDABBL/NLGUPc9aspZzg0AQMwRamIoco8aVj4BABBzhJoYiiznZpIwAAAxR6iJod2HuUcNAADxQqiJoerIvk/MqQEAINYINTHS2N6pI62dkphTAwBAPBBqYqS6az5NQZZXWb4Ui6sBAMD5CDUxsisy9EQvDQAA8UCoiZFjG1kynwYAgHgg1MRI9/ATPTUAAMQHoSZGdnftzs1ybgAA4oNQEyPVh7hHDQAA8USoiQF/IKj9je2SuEcNAADxYptQ8y//8i8qKytTWlqahg8frm9/+9vat2+f1WWdUM3hNhkjZXg9KsjyWl0OAABJwTahZvbs2Xr22WdVVVWlv/zlL9qxY4e++tWvWl3WCVVH5tNkyuVyWVwNAADJwTZ3hbv99tsjz8vLy7Vo0SJdddVV6uzsVGpq6gk/4/f75ff7I68bGxtjXqfERpYAAFjBNj01PR0+fFhPPvmkZs6cedJAI0lLlixRbm5u5CgtLY1LfbuZJAwAQNzZKtT86Ec/UmZmpoYOHarq6mo9//zzp7z+rrvuUkNDQ+SoqamJS53VXbtzs+cTAADxY2moWbRokVwu1ymPLVu2RK6/8847tXHjRr3yyivyeDz6zne+I2PMSb/f5/MpJyen1xEPu7u2SChn5RMAAHFj6ZyaO+64Q/PmzTvlNWPGjIk8LygoUEFBgcaPH68zzjhDpaWlWr16tSoqKmJcad+FQkY1R9okMfwEAEA8WRpqCgsLVVhYOKDPhkIhSeo1ETgR1Da2qyMQUorbpeG5aVaXAwBA0rDF6qc1a9bovffe0wUXXKAhQ4Zox44d+slPfqLTTjstoXpppGOThEuGpCvFY6spSwAA2JotfnUzMjL017/+VZdeeqkmTJigG2+8UZMnT9bKlSvl8/msLq+X7nvUlLE7NwAAcWWLnpqzzjpLr732mtVl9Mku7lEDAIAlbNFTYydsZAkAgDUINVG2u3v4iZ4aAADiilATRcaYHncTZk4NAADxRKiJoqOtnWpqD0iipwYAgHgj1ETR7q7tEYZl+5Tu9VhcDQAAyYVQE0WR7RGYJAwAQNwRaqKoe+VTGXs+AQAQd4SaKOoefqKnBgCA+CPURBH3qAEAwDqEmijiHjUAAFiHUBMl7Z1B1TWGdwwfxT1qAACIO0JNlFR3zafJTktRXkaqxdUAAJB8CDVRsrvHfBqXy2VxNQAAJB9CTZRE7lHDcm4AACxBqImS7uGnMlY+AQBgCUJNlOzqHn5i5RMAAJYg1ERJddfwEz01AABYg1ATBYFgSHuOtEmSylnODQCAJQg1UbC/oV2BkJHX41ZxTprV5QAAkJQINVHQvZy7JD9dHjfLuQEAsAKhJgq6t0dgkjAAANYh1ETBsY0smU8DAIBVCDVR0D38xEaWAABYh1ATBZ3BkDxul8pZzg0AgGVSrC7ACf5z3jQFgiEZqwsBACCJEWqiJMVDpxcAAFbilxgAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADgCoQYAADhCUu3SbYyRJDU2NlpcCQAA6Kvu3+3u3/GTSapQ09TUJEkqLS21uBIAANBfTU1Nys3NPen7LvNZscdBQqGQ9u3bp+zsbLlcrqh9b2Njo0pLS1VTU6OcnJyofS9OjPaOL9o7vmjv+KK942ug7W2MUVNTk0aMGCG3++QzZ5Kqp8btdqukpCRm35+Tk8N/FHFEe8cX7R1ftHd80d7xNZD2PlUPTTcmCgMAAEcg1AAAAEcg1ESBz+fT4sWL5fP5rC4lKdDe8UV7xxftHV+0d3zFur2TaqIwAABwLnpqAACAIxBqAACAIxBqAACAIxBqAACAIxBqouCRRx7RqFGjlJaWphkzZmjt2rVWl+QIb775pq688kqNGDFCLpdLzz33XK/3jTG6++67NXz4cKWnp2vOnDnatm2bNcU6wJIlSzRt2jRlZ2dr2LBhuuqqq1RVVdXrmvb2ds2fP19Dhw5VVlaWvvKVr6iurs6iiu3tl7/8pSZPnhy5CVlFRYVefPHFyPu0dewsXbpULpdLt912W+Qc7R1d99xzj1wuV6/j9NNPj7wfq/Ym1AzSM888o4ULF2rx4sXasGGDpkyZossvv1z19fVWl2Z7LS0tmjJlih555JETvn/ffffpF7/4hR599FGtWbNGmZmZuvzyy9Xe3h7nSp1h5cqVmj9/vlavXq0VK1aos7NTl112mVpaWiLX3H777fr73/+uP/3pT1q5cqX27duna665xsKq7aukpERLly7V+vXrtW7dOl1yySX68pe/rA8//FASbR0r7733nh577DFNnjy513naO/rOPPNM7d+/P3K8/fbbkfdi1t4GgzJ9+nQzf/78yOtgMGhGjBhhlixZYmFVziPJLF++PPI6FAqZ4uJic//990fOHT161Ph8PvPUU09ZUKHz1NfXG0lm5cqVxphw+6amppo//elPkWs+/vhjI8msWrXKqjIdZciQIebxxx+nrWOkqanJjBs3zqxYscJcfPHF5tZbbzXG8Hc7FhYvXmymTJlywvdi2d701AxCR0eH1q9frzlz5kTOud1uzZkzR6tWrbKwMufbuXOnamtre7V9bm6uZsyYQdtHSUNDgyQpPz9fkrR+/Xp1dnb2avPTTz9dZWVltPkgBYNBPf3002ppaVFFRQVtHSPz58/XF7/4xV7tKvF3O1a2bdumESNGaMyYMbruuutUXV0tKbbtnVQbWkbbwYMHFQwGVVRU1Ot8UVGRtmzZYlFVyaG2tlaSTtj23e9h4EKhkG677Tadf/75mjRpkqRwm3u9XuXl5fW6ljYfuE2bNqmiokLt7e3KysrS8uXLNXHiRFVWVtLWUfb0009rw4YNeu+99457j7/b0TdjxgwtW7ZMEyZM0P79+3Xvvffqwgsv1ObNm2Pa3oQaAMeZP3++Nm/e3GsMHNE3YcIEVVZWqqGhQX/+8591/fXXa+XKlVaX5Tg1NTW69dZbtWLFCqWlpVldTlK44oorIs8nT56sGTNmqLy8XM8++6zS09Nj9ucy/DQIBQUF8ng8x83YrqurU3FxsUVVJYfu9qXto2/BggV64YUX9Prrr6ukpCRyvri4WB0dHTp69Giv62nzgfN6vRo7dqymTp2qJUuWaMqUKXrooYdo6yhbv3696uvrde655yolJUUpKSlauXKlfvGLXyglJUVFRUW0d4zl5eVp/Pjx2r59e0z/fhNqBsHr9Wrq1Kl69dVXI+dCoZBeffVVVVRUWFiZ840ePVrFxcW92r6xsVFr1qyh7QfIGKMFCxZo+fLleu211zR69Ohe70+dOlWpqam92ryqqkrV1dW0eZSEQiH5/X7aOsouvfRSbdq0SZWVlZHjvPPO03XXXRd5TnvHVnNzs3bs2KHhw4fH9u/3oKYZwzz99NPG5/OZZcuWmY8++sh873vfM3l5eaa2ttbq0myvqanJbNy40WzcuNFIMg8++KDZuHGj2b17tzHGmKVLl5q8vDzz/PPPmw8++MB8+ctfNqNHjzZtbW0WV25Pt9xyi8nNzTVvvPGG2b9/f+RobW2NXHPzzTebsrIy89prr5l169aZiooKU1FRYWHV9rVo0SKzcuVKs3PnTvPBBx+YRYsWGZfLZV555RVjDG0daz1XPxlDe0fbHXfcYd544w2zc+dO884775g5c+aYgoICU19fb4yJXXsTaqLg4YcfNmVlZcbr9Zrp06eb1atXW12SI7z++utG0nHH9ddfb4wJL+v+yU9+YoqKiozP5zOXXnqpqaqqsrZoGztRW0syTzzxROSatrY284Mf/MAMGTLEZGRkmKuvvtrs37/fuqJt7Lvf/a4pLy83Xq/XFBYWmksvvTQSaIyhrWPt06GG9o6ua6+91gwfPtx4vV4zcuRIc+2115rt27dH3o9Ve7uMMWZwfT0AAADWY04NAABwBEINAABwBEINAABwBEINAABwBEINAABwBEINAABwBEINAABwBEINAABwBEINAABwBEINAABwBEINAABwhBSrCwCAwZg1a5YmT56stLQ0Pf744/J6vbr55pt1zz33WF0agDijpwaA7f32t79VZmam1qxZo/vuu08//elPtWLFCqvLAhBn7NINwNZmzZqlYDCot956K3Ju+vTpuuSSS7R06VILKwMQb/TUALC9yZMn93o9fPhw1dfXW1QNAKsQagDYXmpqaq/XLpdLoVDIomoAWIVQAwAAHIFQAwAAHIFQAwAAHIHVTwAAwBHoqQEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI5AqAEAAI7w/wE7gp9J12PyMQAAAABJRU5ErkJggg=="
+class="
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Which is simpler than the PyTorch equivalent,</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+
+<span class="n">n_iterations</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">eta</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">3.5</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">x_hist</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_iterations</span><span class="p">)):</span>
+    <span class="n">x_hist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">data</span> <span class="o">-=</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">grad</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_hist</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+<p>Because PyTorch needs to handle state (of a function and its gradients).</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can extended this to more complex vector-valued functions, where the <code>grad</code> operator will behave like the <a href="https://en.wikipedia.org/wiki/Del">$\nabla$ operator</a> in formal calculus.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-13">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_squares</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">sum_of_squares_dx</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sum-of-squares = </span><span class="si">{</span><span class="n">sum_of_squares</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;d sum-of-squares / dx = </span><span class="si">{</span><span class="n">sum_of_squares_dx</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-13" class="clipboard-copy-txt">def sum_of_squares(x: jnp.DeviceArray) -> jnp.DeviceArray:
+    return jnp.sum(x**2)
+
+
+sum_of_squares_dx = jax.grad(sum_of_squares)
+
+x = jnp.array([1.0, 2.0, 3.0, 4.0, 5.0])
+print(f"sum-of-squares = {sum_of_squares(x)}")
+print(f"d sum-of-squares / dx = {sum_of_squares_dx(x)}")</div>
     
         </div>
     </div>
@@ -3882,185 +3467,96 @@ df</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>type(df) = &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-df:
+<pre>sum-of-squares = 55.0
+d sum-of-squares / dx = [ 2.  4.  6.  8. 10.]
 </pre>
 </div>
 </div>
 
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>By default, the <code>grad</code> operator will only compute derivatives relative to a function's first argument. To extend this to other arguments we use <code>argnums</code>.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-14">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_squared_errors</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">DeviceArray</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">jnp</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">sum_of_squared_errors_dx</span> <span class="o">=</span> <span class="n">jax</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">sum_of_squared_errors</span><span class="p">,</span> <span class="n">argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sum-of-squared-errors = </span><span class="si">{</span><span class="n">sum_of_squared_errors</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="mf">1.1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;d sum-of-squared-errors / dx = </span><span class="si">{</span><span class="n">sum_of_squared_errors_dx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="mf">1.1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;d sum-of-squared-errors / dy = </span><span class="si">{</span><span class="n">sum_of_squared_errors_dx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="mf">1.1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-14" class="clipboard-copy-txt">def sum_of_squared_errors(x: jnp.DeviceArray, y: jnp.DeviceArray) -> jnp.DeviceArray:
+    return jnp.sum((x - y) ** 2)
+
+
+sum_of_squared_errors_dx = jax.grad(sum_of_squared_errors, argnums=(0, 1))
+
+x = jnp.array([1.0, 2.0, 3.0, 4.0, 5.0])
+print(f"sum-of-squared-errors = {sum_of_squared_errors(x, x*1.1)}")
+print(f"d sum-of-squared-errors / dx = {sum_of_squared_errors_dx(x, x*1.1)[0]}")
+print(f"d sum-of-squared-errors / dy = {sum_of_squared_errors_dx(x, x*1.1)[1]}")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>iso_alpha2</th>
-      <th>iso_alpha3</th>
-      <th>iso_numeric</th>
-      <th>fips</th>
-      <th>name</th>
-      <th>capital</th>
-      <th>area_km2</th>
-      <th>population</th>
-      <th>continent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AD</td>
-      <td>AND</td>
-      <td>20</td>
-      <td>AN</td>
-      <td>Andorra</td>
-      <td>Andorra la Vella</td>
-      <td>468.0</td>
-      <td>84000</td>
-      <td>EU</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AE</td>
-      <td>ARE</td>
-      <td>784</td>
-      <td>AE</td>
-      <td>United Arab Emirates</td>
-      <td>Abu Dhabi</td>
-      <td>82880.0</td>
-      <td>4975593</td>
-      <td>AS</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>4</td>
-      <td>AF</td>
-      <td>Afghanistan</td>
-      <td>Kabul</td>
-      <td>647500.0</td>
-      <td>29121286</td>
-      <td>AS</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>28</td>
-      <td>AC</td>
-      <td>Antigua and Barbuda</td>
-      <td>St. Johns</td>
-      <td>443.0</td>
-      <td>86754</td>
-      <td>NA</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>AI</td>
-      <td>AIA</td>
-      <td>660</td>
-      <td>AV</td>
-      <td>Anguilla</td>
-      <td>The Valley</td>
-      <td>102.0</td>
-      <td>13254</td>
-      <td>NA</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>247</th>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>887</td>
-      <td>YM</td>
-      <td>Yemen</td>
-      <td>Sanaa</td>
-      <td>527970.0</td>
-      <td>23495361</td>
-      <td>AS</td>
-    </tr>
-    <tr>
-      <th>248</th>
-      <td>YT</td>
-      <td>MYT</td>
-      <td>175</td>
-      <td>MF</td>
-      <td>Mayotte</td>
-      <td>Mamoudzou</td>
-      <td>374.0</td>
-      <td>159042</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>249</th>
-      <td>ZA</td>
-      <td>ZAF</td>
-      <td>710</td>
-      <td>SF</td>
-      <td>South Africa</td>
-      <td>Pretoria</td>
-      <td>1219912.0</td>
-      <td>49000000</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>250</th>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>894</td>
-      <td>ZA</td>
-      <td>Zambia</td>
-      <td>Lusaka</td>
-      <td>752614.0</td>
-      <td>13460305</td>
-      <td>AF</td>
-    </tr>
-    <tr>
-      <th>251</th>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>716</td>
-      <td>ZI</td>
-      <td>Zimbabwe</td>
-      <td>Harare</td>
-      <td>390580.0</td>
-      <td>13061000</td>
-      <td>AF</td>
-    </tr>
-  </tbody>
-</table>
-<p>252 rows × 9 columns</p>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>sum-of-squared-errors = 0.5500001907348633
+d sum-of-squared-errors / dx = [-0.20000005 -0.4000001  -0.6000004  -0.8000002  -1.        ]
+d sum-of-squared-errors / dy = [0.20000005 0.4000001  0.6000004  0.8000002  1.        ]
+</pre>
 </div>
 </div>
 
@@ -4069,7 +3565,17 @@ df:
 </div>
 
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The <code>grad</code> function is also enabled to allow us to return a tuple with non-derivative values, via the <code>has_aux</code> argument, and there is also a <code>value_and_grad</code> alternative to <code>grad</code> that return the function value as well as the derivates.</p>
 
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -4116,13 +3622,13 @@ df:
       
       
         
-        <a href="../../sqlalchemy/" class="md-footer__link md-footer__link--next" aria-label="Next: Object Relation Mapping using SQL Alchemy" rel="next">
+        <a href="../linear_regression/" class="md-footer__link md-footer__link--next" aria-label="Next: Linear Regression with SGD" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Object Relation Mapping using SQL Alchemy
+              Linear Regression with SGD
             </div>
           </div>
           <div class="md-footer__button md-icon">

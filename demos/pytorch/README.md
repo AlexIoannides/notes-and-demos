@@ -1,13 +1,13 @@
 # Introduction to PyTorch
 
-PyTorch is a ML framework that provides NumPy-like tensor computation together with the fundamental building blocks for constructing and training deep learning models.
+[PyTorch](https://pytorch.org) is a ML framework that provides NumPy-like tensor computation together with the fundamental building blocks for constructing and training deep learning models.
 
 ## Demo Objectives
 
 * How to manipulate tensors - i.e., PyTorch as an alternative to NumPy.
 * How to use auto-differentiation and minimise arbitrary functions.
 * How to create custom data loaders for efficient model training.
-* How to build and train ML models from first principles (linear regression).
+* How to build and train ML models from first principles - linear and logistic regression.
 * How to build and train a deep learning model for image classification.
 
 ## Running the Demo
