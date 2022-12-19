@@ -4,6 +4,7 @@
 
 # PyTorch
 data/
+lightning_logs
 
 # mlflow
 mlflow/artefacts

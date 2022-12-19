@@ -255,6 +255,8 @@
         
           
         
+          
+        
       
       
         
@@ -411,6 +413,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MNIST_pytorch_lightning/" class="md-nav__link">
+        PyTorch Lightning
+      </a>
     </li>
   
 
@@ -2349,7 +2365,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="deep-learning">Deep Learning<a class="anchor-link" href="#deep-learning">&#182;</a></h1><p>This notebook tackles the classic <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a> classification task, as a proxy for building simple neural networks with PyTorch.</p>
+<h1 id="deep-learning">Deep Learning<a class="anchor-link" href="#deep-learning">&#182;</a></h1><p>This notebook tackles the classic <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a> image classification task, as a proxy for building simple neural networks with PyTorch.</p>
 
 </div>
 </div>
@@ -2361,7 +2377,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="imports-and-configuration">Imports and Configuration<a class="anchor-link" href="#imports-and-configuration">&#182;</a></h2>
+<h2 id="imports-and-configuration">Imports and Configuration<a class="anchor-link" href="#imports-and-configuration">&#182;</a></h2><p>Set random seeds.</p>
+
 </div>
 </div>
 </div>
@@ -2430,7 +2447,7 @@ torch.manual_seed(1)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;torch._C.Generator at 0x10772e270&gt;</pre>
+<pre>&lt;torch._C.Generator at 0x109a310f0&gt;</pre>
 </div>
 
 </div>
@@ -2473,38 +2490,38 @@ torch.manual_seed(1)</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train_data</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span>
-    <span class="n">root</span><span class="o">=</span><span class="s1">&#39;./data&#39;</span><span class="p">,</span>
+    <span class="n">root</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="p">,</span>
     <span class="n">train</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
 <span class="p">)</span>
 
 <span class="n">test_data</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span>
-    <span class="n">root</span><span class="o">=</span><span class="s1">&#39;./data&#39;</span><span class="p">,</span>
+    <span class="n">root</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="p">,</span>
     <span class="n">train</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> instances of training data&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> instances of training data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> instances of training data&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> instances of training data&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">train_data = torchvision.datasets.MNIST(
-    root='./data',
+    root="./data",
     train=True,
     download=True,
-    transform=torchvision.transforms.ToTensor()
+    transform=torchvision.transforms.ToTensor(),
 )
 
 test_data = torchvision.datasets.MNIST(
-    root='./data',
+    root="./data",
     train=False,
     download=True,
-    transform=torchvision.transforms.ToTensor()
+    transform=torchvision.transforms.ToTensor(),
 )
 
-print(f'{len(train_data):,} instances of training data')
-print(f'{len(test_data):,} instances of training data')</div>
+print(f"{len(train_data):,} instances of training data")
+print(f"{len(test_data):,} instances of training data")</div>
     
         </div>
     </div>
@@ -2571,12 +2588,12 @@ print(f'{len(test_data):,} instances of training data')</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data_instance</span><span class="p">,</span> <span class="n">data_label</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;label = </span><span class="si">{</span><span class="n">data_label</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;label = </span><span class="si">{</span><span class="n">data_label</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">data_instance, data_label = train_data[0]
-print(f'label = {data_label}')
-_ = plt.imshow(data_instance[0], cmap='gray')</div>
+print(f"label = {data_label}")
+_ = plt.imshow(data_instance[0], cmap="gray")</div>
     
         </div>
     </div>
@@ -2660,38 +2677,40 @@ class="
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">ClassifyMNIST</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;MNIST classification network.&quot;&quot;&quot;</span>
-    
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_hidden_neurons</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span> <span class="o">=</span> <span class="mi">28</span> <span class="o">*</span> <span class="mi">28</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_classes</span> <span class="o">=</span> <span class="mi">10</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden_neurons</span> <span class="o">=</span> <span class="n">n_hidden_neurons</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
             <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">n_hidden_neurons</span><span class="p">),</span>
             <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
-            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_hidden_neurons</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_classes</span><span class="p">)</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_hidden_neurons</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_classes</span><span class="p">),</span>
         <span class="p">)</span>
-        
-    
+
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Compute a prediction.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 <div id="cell-4" class="clipboard-copy-txt">class ClassifyMNIST(nn.Module):
     """MNIST classification network."""
-    
+
     def __init__(self, n_hidden_neurons):
         super().__init__()
         self.input_dim = 28 * 28
         self.n_classes = 10
         self.n_hidden_neurons = n_hidden_neurons
+
         self.model = nn.Sequential(
+            nn.Flatten(),
             nn.Linear(self.input_dim, n_hidden_neurons),
             nn.ReLU(),
-            nn.Linear(n_hidden_neurons, self.n_classes)
+            nn.Linear(n_hidden_neurons, self.n_classes),
         )
-        
-    
+
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """Compute a prediction."""
         return self.model(X)</div>
@@ -2741,12 +2760,12 @@ class="
     <span class="n">criterion</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
     <span class="n">data_loader</span><span class="p">:</span> <span class="n">DataLoader</span><span class="p">,</span>
     <span class="n">n_epochs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">learning_rate</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">learning_rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Train the model over multiple epochs recording the loss for each.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">process_batch</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="n">y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">input_dim</span><span class="p">))</span>
+        <span class="n">y_hat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
         <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">y_hat</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
         <span class="n">optimiser</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
         <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
@@ -2756,6 +2775,7 @@ class="
     <span class="k">def</span> <span class="nf">process_epoch</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">process_batch</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data_loader</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
+    <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
     <span class="n">optimiser</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
     <span class="n">training_run</span> <span class="o">=</span> <span class="p">[</span><span class="n">process_epoch</span><span class="p">(</span><span class="n">epoch</span><span class="p">)</span> <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">))]</span>
     <span class="k">return</span> <span class="n">training_run</span>
@@ -2765,12 +2785,12 @@ class="
     criterion: nn.Module,
     data_loader: DataLoader,
     n_epochs: int,
-    learning_rate: float
+    learning_rate: float,
 ) -> Sequence[float]:
     """Train the model over multiple epochs recording the loss for each."""
 
     def process_batch(X: torch.Tensor, y: torch.Tensor) -> float:
-        y_hat = model.forward(X.view(-1, model.input_dim))
+        y_hat = model.forward(X)
         loss = criterion(y_hat, y)
         optimiser.zero_grad()
         loss.backward()
@@ -2780,6 +2800,7 @@ class="
     def process_epoch(n: int) -> float:
         return [process_batch(X, y) for X, y in data_loader][-1]
 
+    model.train()
     optimiser = torch.optim.SGD(model.parameters(), lr=0.05)
     training_run = [process_epoch(epoch) for epoch in tqdm(range(n_epochs))]
     return training_run</div>
@@ -2825,14 +2846,14 @@ class="
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">training_data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">nn_model</span> <span class="o">=</span> <span class="n">ClassifyMNIST</span><span class="p">(</span><span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ClassifyMNIST</span><span class="p">(</span><span class="mi">28</span> <span class="o">*</span> <span class="mi">28</span><span class="p">)</span>
 <span class="n">loss_func</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
-<span class="n">train</span><span class="p">(</span><span class="n">nn_model</span><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <span class="n">training_data_loader</span><span class="p">,</span> <span class="n">n_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">train</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">loss_func</span><span class="p">,</span> <span class="n">training_data_loader</span><span class="p">,</span> <span class="n">n_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 <div id="cell-6" class="clipboard-copy-txt">training_data_loader = DataLoader(dataset=train_data, batch_size=500)
-nn_model = ClassifyMNIST(28*28)
+model = ClassifyMNIST(28 * 28)
 loss_func = nn.CrossEntropyLoss()
-train(nn_model, loss_func, training_data_loader, n_epochs=10, learning_rate=0.05)</div>
+train(model, loss_func, training_data_loader, n_epochs=10, learning_rate=0.05)</div>
     
         </div>
     </div>
@@ -2854,7 +2875,7 @@ train(nn_model, loss_func, training_data_loader, n_epochs=10, learning_rate=0.05
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>100%|██████████| 10/10 [00:18&lt;00:00,  1.81s/it]
+<pre>100%|██████████| 10/10 [00:19&lt;00:00,  1.95s/it]
 </pre>
 </div>
 </div>
@@ -2920,21 +2941,37 @@ train(nn_model, loss_func, training_data_loader, n_epochs=10, learning_rate=0.05
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">test_data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">test_data</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">test_data_loader</span><span class="p">:</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">y_hat</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nn_model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)),</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y_hat</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
-<span class="n">accuracy</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">:</span> <span class="n">DataLoader</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Compute classification accuracy.&quot;&quot;&quot;</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">inference_mode</span><span class="p">():</span>
+        <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data_loader</span><span class="p">:</span>
+            <span class="n">y_hat</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y_hat</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">accuracy</span>
+
+
+<span class="n">test_data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">test_data</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">accuracy</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">test_data_loader</span><span class="p">)</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt">test_data_loader = DataLoader(dataset=test_data, batch_size=10000)
-correct = 0
-for X, y in test_data_loader:
-    _, y_hat = torch.max(nn_model.forward(X.view(-1, 28*28)), 1)
-    correct += (y_hat == y).sum()
-accuracy = correct / len(test_data)
-accuracy</div>
+<div id="cell-7" class="clipboard-copy-txt">def accuracy(model: nn.Module, data_loader: DataLoader) -> float:
+    """Compute classification accuracy."""
+    model.eval()
+    with torch.inference_mode():
+        correct = 0
+        for X, y in data_loader:
+            y_hat = torch.argmax(model(X), 1)
+            correct += (y_hat == y).sum().tolist()
+
+    accuracy = correct / len(test_data)
+    return accuracy
+
+
+test_data_loader = DataLoader(dataset=test_data, batch_size=10000)
+accuracy(model, test_data_loader)</div>
     
         </div>
     </div>
@@ -2958,7 +2995,7 @@ accuracy</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>tensor(0.9236)</pre>
+<pre>0.9236</pre>
 </div>
 
 </div>
@@ -2975,7 +3012,7 @@ accuracy</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let's test it on the test instance displayed above.</p>
+<p>Scoring a single instance manually.</p>
 
 </div>
 </div>
@@ -3001,11 +3038,17 @@ accuracy</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">output_from_final_layer</span> <span class="o">=</span> <span class="n">nn_model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">data_instance</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">))</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">inference_mode</span><span class="p">():</span>
+    <span class="n">output_from_final_layer</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">data_instance</span><span class="p">)</span>
+
 <span class="n">value</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">output_from_final_layer</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">index</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">output_from_final_layer = nn_model.forward(data_instance.view(-1, 28*28))
+<div id="cell-8" class="clipboard-copy-txt">model.eval()
+with torch.inference_mode():
+    output_from_final_layer = model.forward(data_instance)
+
 value, index = torch.max(output_from_final_layer, 1)
 index</div>
     
@@ -3086,13 +3129,13 @@ index</div>
       
       
         
-        <a href="../../jax/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction to JAX" rel="next">
+        <a href="../MNIST_pytorch_lightning/" class="md-footer__link md-footer__link--next" aria-label="Next: PyTorch Lightning" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction to JAX
+              PyTorch Lightning
             </div>
           </div>
           <div class="md-footer__button md-icon">
