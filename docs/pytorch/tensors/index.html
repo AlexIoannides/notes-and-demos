@@ -2645,20 +2645,20 @@ from tqdm import tqdm</div>
 <span class="n">c</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">c</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">FloatTensor</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;size of a = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="si">}</span><span class="s1">, which is the same as its shape = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dimensions of a = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">ndimension</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;element 0 of a is </span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;type of tensor a is </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">, aka </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">type</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;size of a = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="si">}</span><span class="s2">, which is the same as its shape = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dimensions of a = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">ndimension</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;element 0 of a is </span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type of tensor a is </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">, aka </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">type</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">a = torch.tensor([0, 1, 2, 3, 4], dtype=torch.float32)
 b = torch.FloatTensor([5, 6, 7, 8, 9])
 c = torch.linspace(10, 14, steps=5)
 c.type(torch.FloatTensor)
 
-print(f'size of a = {a.size()}, which is the same as its shape = {a.shape}')
-print(f'dimensions of a = {a.ndimension()}')
-print(f'element 0 of a is {a[0]}')
-print(f'type of tensor a is {a.dtype}, aka {a.type()}')</div>
+print(f"size of a = {a.size()}, which is the same as its shape = {a.shape}")
+print(f"dimensions of a = {a.ndimension()}")
+print(f"element 0 of a is {a[0]}")
+print(f"type of tensor a is {a.dtype}, aka {a.type()}")</div>
     
         </div>
     </div>
@@ -2726,11 +2726,11 @@ type of tensor a is torch.float32, aka torch.FloatTensor
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">numpy_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-<span class="n">torch_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">numpy_x</span><span class="p">)</span> 
+<span class="n">torch_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">numpy_x</span><span class="p">)</span>
 <span class="n">torch_x</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">numpy_x = np.array([0, 1, 2, 3, 4])
-torch_x = torch.from_numpy(numpy_x) 
+torch_x = torch.from_numpy(numpy_x)
 torch_x</div>
     
         </div>
@@ -3326,15 +3326,15 @@ d</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">FloatTensor</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dimensions of q = </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">ndimension</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;shape of q = </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;number of elements in q = </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dimensions of q = </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">ndimension</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;shape of q = </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;number of elements in q = </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-12" class="clipboard-copy-txt">q = torch.FloatTensor([[0, 1, 2], [3, 4, 5], [6, 7, 8]])
 
-print(f'dimensions of q = {q.ndimension()}')
-print(f'shape of q = {q.shape}')
-print(f'number of elements in q = {q.numel()}')</div>
+print(f"dimensions of q = {q.ndimension()}")
+print(f"shape of q = {q.shape}")
+print(f"number of elements in q = {q.numel()}")</div>
     
         </div>
     </div>
@@ -3474,13 +3474,13 @@ s</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">y</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
 <span class="n">x</span><span class="o">.</span><span class="n">grad</span>
 </pre></div>
-<div id="cell-14" class="clipboard-copy-txt">x = torch.tensor(2., requires_grad=True)
-y = x ** 2
+<div id="cell-14" class="clipboard-copy-txt">x = torch.tensor(2.0, requires_grad=True)
+y = x**2
 y.backward()
 x.grad</div>
     
@@ -3537,11 +3537,11 @@ x.grad</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;is x a leaf node in the computation graph? </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">is_leaf</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;is y a leaf node in the computation graph? </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">is_leaf</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;is x a leaf node in the computation graph? </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">is_leaf</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;is y a leaf node in the computation graph? </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">is_leaf</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-15" class="clipboard-copy-txt">print(f'is x a leaf node in the computation graph? {x.is_leaf}')
-print(f'is y a leaf node in the computation graph? {y.is_leaf}')</div>
+<div id="cell-15" class="clipboard-copy-txt">print(f"is x a leaf node in the computation graph? {x.is_leaf}")
+print(f"is y a leaf node in the computation graph? {y.is_leaf}")</div>
     
         </div>
     </div>
@@ -3595,21 +3595,21 @@ is y a leaf node in the computation graph? False
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span>
 <span class="n">p</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dp/dm at m = </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">grad</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dp/dn at n = </span><span class="si">{</span><span class="n">n</span><span class="o">.</span><span class="n">grad</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dp/dm at m = </span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">grad</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dp/dn at n = </span><span class="si">{</span><span class="n">n</span><span class="o">.</span><span class="n">grad</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-16" class="clipboard-copy-txt">m = torch.tensor(2., requires_grad=True)
-n = torch.tensor(1., requires_grad=True)
+<div id="cell-16" class="clipboard-copy-txt">m = torch.tensor(2.0, requires_grad=True)
+n = torch.tensor(1.0, requires_grad=True)
 p = m + 2 * n
 p.backward()
 
-print(f'dp/dm at m = {m.grad}')
-print(f'dp/dn at n = {n.grad}')</div>
+print(f"dp/dm at m = {m.grad}")
+print(f"dp/dn at n = {n.grad}")</div>
     
         </div>
     </div>
@@ -3711,8 +3711,7 @@ for n in tqdm(range(n_iterations)):
     x.grad.zero_()
 
 print(f"x = {x.detach().numpy()[0]:.2f}")
-_ = sns.lineplot(y="x", x="n", data=pd.DataFrame(x_hist, columns=["n", "x"]))
-</div>
+_ = sns.lineplot(y="x", x="n", data=pd.DataFrame(x_hist, columns=["n", "x"]))</div>
     
         </div>
     </div>
@@ -3841,8 +3840,7 @@ for n in tqdm(range(n_iterations)):
     optimizer.step()
 
 print(f"x = {x.detach().numpy()[0]:.2f}")
-_ = sns.lineplot(y="x", x="n", data=pd.DataFrame(x_hist, columns=["n", "x"]))
-</div>
+_ = sns.lineplot(y="x", x="n", data=pd.DataFrame(x_hist, columns=["n", "x"]))</div>
     
         </div>
     </div>

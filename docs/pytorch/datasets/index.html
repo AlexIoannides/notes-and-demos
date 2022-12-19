@@ -2462,7 +2462,6 @@ from torch.utils.data import Dataset, DataLoader</div>
 
 
 <span class="k">class</span> <span class="nc">MyRandomRegressionDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
-
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">transform</span><span class="p">:</span> <span class="n">Transformer</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">n_samples</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
@@ -2470,10 +2469,10 @@ from torch.utils.data import Dataset, DataLoader</div>
         <span class="n">y</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">X</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-    
+
     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span>
-    
+
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
         <span class="n">sample</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">:</span>
@@ -2483,14 +2482,13 @@ from torch.utils.data import Dataset, DataLoader</div>
 
 
 <span class="n">regression_data</span> <span class="o">=</span> <span class="n">MyRandomRegressionDataset</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;regression_data size = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">regression_data</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;regression_data[5] = </span><span class="si">{</span><span class="n">regression_data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;regression_data size = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">regression_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;regression_data[5] = </span><span class="si">{</span><span class="n">regression_data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">Transformer = Callable[[Tuple[float, float]], Tuple[float, float]]
 
 
 class MyRandomRegressionDataset(Dataset):
-
     def __init__(self, n_samples: int, transform: Transformer = None):
         self.n_samples = n_samples
         self.transform = transform
@@ -2498,10 +2496,10 @@ class MyRandomRegressionDataset(Dataset):
         y = 0.5 * X + np.sqrt(0.75) * np.random.normal(0, 1, n_samples)
         self.X = torch.from_numpy(X)
         self.y = torch.from_numpy(y)
-    
+
     def __len__(self) -> int:
         return self.n_samples
-    
+
     def __getitem__(self, idx) -> Tuple[float, float]:
         sample = (self.X[idx], self.y[idx])
         if self.transform:
@@ -2511,8 +2509,8 @@ class MyRandomRegressionDataset(Dataset):
 
 
 regression_data = MyRandomRegressionDataset(100)
-print(f'regression_data size = {len(regression_data)}')
-print(f'regression_data[5] = {regression_data[5]}')</div>
+print(f"regression_data size = {len(regression_data)}")
+print(f"regression_data[5] = {regression_data[5]}")</div>
     
         </div>
     </div>
@@ -2579,36 +2577,30 @@ regression_data[5] = (tensor(-0.5618, dtype=torch.float64), tensor(-0.5182, dtyp
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">ScalarTransform</span><span class="p">:</span>
-
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">=</span> <span class="n">multiplier</span>
-        
+
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
         <span class="n">X_trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">*</span> <span class="n">sample</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">y_trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiplier</span> <span class="o">*</span> <span class="n">sample</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">X_trans</span><span class="p">,</span> <span class="n">y_trans</span><span class="p">)</span>
-    
-    
-<span class="n">regression_data_scaled</span> <span class="o">=</span> <span class="n">MyRandomRegressionDataset</span><span class="p">(</span>
-    <span class="mi">100</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ScalarTransform</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;regression_data_scaled[5] = </span><span class="si">{</span><span class="n">regression_data_scaled</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="n">regression_data_scaled</span> <span class="o">=</span> <span class="n">MyRandomRegressionDataset</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ScalarTransform</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;regression_data_scaled[5] = </span><span class="si">{</span><span class="n">regression_data_scaled</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">class ScalarTransform:
-
     def __init__(self, multiplier: float):
         self.multiplier = multiplier
-        
+
     def __call__(self, sample: Tuple[float, float]) -> Tuple[float, float]:
         X_trans = self.multiplier * sample[0]
         y_trans = self.multiplier * sample[1]
         return (X_trans, y_trans)
-    
-    
-regression_data_scaled = MyRandomRegressionDataset(
-    100, transform=ScalarTransform(2)
-)
-print(f'regression_data_scaled[5] = {regression_data_scaled[5]}')</div>
+
+
+regression_data_scaled = MyRandomRegressionDataset(100, transform=ScalarTransform(2))
+print(f"regression_data_scaled[5] = {regression_data_scaled[5]}")</div>
     
         </div>
     </div>

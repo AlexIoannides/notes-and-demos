@@ -2530,52 +2530,50 @@ from torch.utils.data import Dataset, DataLoader</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">LinearModelData</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
-    
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">w</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">len</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        
+
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">FloatTensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">FloatTensor</span><span class="p">]:</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
-    
+
     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">len</span>
-    
-    
+
+
 <span class="n">data</span> <span class="o">=</span> <span class="n">LinearModelData</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;n_samples = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;data[0] = </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;n_samples = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data[0] = </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">data_batches</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data_loader</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;mini_batch[0] = </span><span class="si">{</span><span class="n">data_batches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mini_batch[0] = </span><span class="si">{</span><span class="n">data_batches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">class LinearModelData(Dataset):
-    
     def __init__(self, b: float, w: float):
         self.w = torch.tensor(w)
         self.b = torch.tensor(b)
         self.X = torch.arange(-2, 2, 0.01).view(-1, 1)
         self.y = self.b + self.w * self.X + torch.randn(self.X.size())
         self.len = self.y.shape[0]
-        
+
     def __getitem__(self, idx: float) -> Tuple[torch.FloatTensor, torch.FloatTensor]:
         return (self.X[idx], self.y[idx])
-    
+
     def __len__(self) -> int:
         return self.len
-    
-    
+
+
 data = LinearModelData(b=0, w=1)
-print(f'n_samples = {len(data)}')
-print(f'data[0] = {data[0]}')
+print(f"n_samples = {len(data)}")
+print(f"data[0] = {data[0]}")
 
 data_loader = DataLoader(dataset=data, batch_size=5)
 data_batches = list(data_loader)
-print(f'mini_batch[0] = {data_batches[0]}')</div>
+print(f"mini_batch[0] = {data_batches[0]}")</div>
     
         </div>
     </div>
@@ -2657,30 +2655,30 @@ mini_batch[0] = [tensor([[-2.0000],
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        
+
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Compute a prediction.&quot;&quot;&quot;</span>
         <span class="n">y_hat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="n">x</span>
         <span class="k">return</span> <span class="n">y_hat</span>
 
-    
+
 <span class="k">class</span> <span class="nc">MSELoss</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Mean squared-error loss from first principles.&quot;&quot;&quot;</span>
-    
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-    
+
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Compute loss.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">y_hat</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-    
+
 
 <span class="k">def</span> <span class="nf">train_linear_regression</span><span class="p">(</span>
     <span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
     <span class="n">criterion</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
     <span class="n">data_loader</span><span class="p">:</span> <span class="n">DataLoader</span><span class="p">,</span>
     <span class="n">n_epochs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">learning_rate</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">learning_rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Train the model over multiple epochs recording the loss for each.&quot;&quot;&quot;</span>
 
@@ -2711,30 +2709,30 @@ mini_batch[0] = [tensor([[-2.0000],
         super().__init__()
         self.b = torch.tensor([torch.randn(1)], requires_grad=True)
         self.w = torch.tensor([torch.randn(1)], requires_grad=True)
-        
+
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Compute a prediction."""
         y_hat = self.b + self.w * x
         return y_hat
 
-    
+
 class MSELoss(torch.nn.Module):
     """Mean squared-error loss from first principles."""
-    
+
     def __init__(self):
         super().__init__()
-    
+
     def forward(self, y_hat: torch.Tensor, y: torch.Tensor):
         """Compute loss."""
         return torch.mean((y_hat - y) ** 2)
-    
+
 
 def train_linear_regression(
     model: torch.nn.Module,
     criterion: torch.nn.Module,
     data_loader: DataLoader,
     n_epochs: int,
-    learning_rate: float
+    learning_rate: float,
 ) -> Sequence[float]:
     """Train the model over multiple epochs recording the loss for each."""
 
@@ -2800,42 +2798,34 @@ def train_linear_regression(
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">mse_loss</span> <span class="o">=</span> <span class="n">MSELoss</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;initial parameters:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;initial parameters:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">post-training parameters:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">post-training parameters:&quot;</span><span class="p">)</span>
 <span class="n">per_epoch_loss</span> <span class="o">=</span> <span class="n">train_linear_regression</span><span class="p">(</span>
-    <span class="n">lin_reg</span><span class="p">,</span>
-    <span class="n">mse_loss</span><span class="p">,</span>
-    <span class="n">data_loader</span><span class="p">,</span>
-    <span class="n">n_epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span>
+    <span class="n">lin_reg</span><span class="p">,</span> <span class="n">mse_loss</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">,</span> <span class="n">n_epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span>
 <span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">loss per-epoch:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">loss per-epoch:&quot;</span><span class="p">)</span>
 <span class="n">per_epoch_loss</span>
 </pre></div>
 <div id="cell-5" class="clipboard-copy-txt">lin_reg = LinearRegression()
 mse_loss = MSELoss()
-print('initial parameters:')
+print("initial parameters:")
 for k, v in lin_reg.state_dict().items():
-    print(f'  {k}: {v}')
+    print(f"  {k}: {v}")
 
-print('\npost-training parameters:')
+print("\npost-training parameters:")
 per_epoch_loss = train_linear_regression(
-    lin_reg,
-    mse_loss,
-    data_loader,
-    n_epochs=20,
-    learning_rate=0.05
+    lin_reg, mse_loss, data_loader, n_epochs=20, learning_rate=0.05
 )
 for k, v in lin_reg.state_dict().items():
-    print(f'  {k}: {v}')
+    print(f"  {k}: {v}")
 
-print('\nloss per-epoch:')
+print("\nloss per-epoch:")
 per_epoch_loss</div>
     
         </div>
@@ -3023,7 +3013,6 @@ rmse</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">LinearRegressionPyTorch</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
@@ -3038,7 +3027,7 @@ rmse</div>
     <span class="n">criterion</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
     <span class="n">data_loader</span><span class="p">:</span> <span class="n">DataLoader</span><span class="p">,</span>
     <span class="n">n_epochs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">learning_rate</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">learning_rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Train the model over multiple epochs recording the loss for each.&quot;&quot;&quot;</span>
 
@@ -3058,7 +3047,6 @@ rmse</div>
     <span class="k">return</span> <span class="n">training_run</span>
 </pre></div>
 <div id="cell-7" class="clipboard-copy-txt">class LinearRegressionPyTorch(torch.nn.Module):
-    
     def __init__(self, input_size: int, output_size: int):
         super().__init__()
         self.model = torch.nn.Linear(input_size, output_size)
@@ -3073,7 +3061,7 @@ def train_linear_regression_pytorch(
     criterion: torch.nn.Module,
     data_loader: DataLoader,
     n_epochs: int,
-    learning_rate: float
+    learning_rate: float,
 ) -> Sequence[float]:
     """Train the model over multiple epochs recording the loss for each."""
 
@@ -3135,21 +3123,13 @@ def train_linear_regression_pytorch(
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">lin_reg_pt</span> <span class="o">=</span> <span class="n">LinearRegressionPyTorch</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mse_loss_pt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
 <span class="n">train_linear_regression_pytorch</span><span class="p">(</span>
-    <span class="n">lin_reg_pt</span><span class="p">,</span>
-    <span class="n">mse_loss_pt</span><span class="p">,</span>
-    <span class="n">data_loader</span><span class="p">,</span>
-    <span class="n">n_epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span>
+    <span class="n">lin_reg_pt</span><span class="p">,</span> <span class="n">mse_loss_pt</span><span class="p">,</span> <span class="n">data_loader</span><span class="p">,</span> <span class="n">n_epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span>
 <span class="p">)</span>
 </pre></div>
 <div id="cell-8" class="clipboard-copy-txt">lin_reg_pt = LinearRegressionPyTorch(1, 1)
 mse_loss_pt = torch.nn.MSELoss()
 train_linear_regression_pytorch(
-    lin_reg_pt,
-    mse_loss_pt,
-    data_loader,
-    n_epochs=20,
-    learning_rate=0.05
+    lin_reg_pt, mse_loss_pt, data_loader, n_epochs=20, learning_rate=0.05
 )</div>
     
         </div>

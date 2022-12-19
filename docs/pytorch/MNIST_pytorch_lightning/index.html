@@ -2290,8 +2290,8 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="deep-learning-pytorch-lightning">Deep Learning &amp; PyTorch Lightning<a class="anchor-link" href="#deep-learning-pytorch-lightning">&#182;</a></h1><p>This notebook revisits the classic MNIST classification task that we used to demonstrate deep learning with PyTorch, but with the aim of demonstrating the benefits of using the PyTorch Lightening framework. PyTorch Lightning extends PyTorch to provide a consistent workflow for defining, training and applying deep learning models, together with many productivity gains via automating repetetive tasks common to all deep learning models.</p>
-<p>The two core components of PyTorch Lightning are the <code>LightningModule</code> and <code>Trainer</code> classes. This notebook makes use of these classes to rework a pure PyTorch MNIST classification model (see previous notebook on 'Deep Learning with PyTorch').</p>
+<h1 id="deep-learning-pytorch-lightning">Deep Learning &amp; PyTorch Lightning<a class="anchor-link" href="#deep-learning-pytorch-lightning">&#182;</a></h1><p>This notebook revisits the classic MNIST classification task that we used to demonstrate deep learning with PyTorch, but with the aim of demonstrating the benefits of using the PyTorch Lightening framework. PyTorch Lightning extends PyTorch to provide a consistent workflow for defining, training and applying deep learning models, together with many productivity gains via automating repetetive tasks common to deep learning.</p>
+<p>The two core components of PyTorch Lightning are the <code>LightningModule</code> and <code>Trainer</code> classes. This notebook makes use of these classes to rework a pure PyTorch MNIST classification model (see previous notebook on 'Deep Learning').</p>
 
 </div>
 </div>
@@ -2303,7 +2303,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="imports-and-configuration">Imports and Configuration<a class="anchor-link" href="#imports-and-configuration">&#182;</a></h2><p>We can use PyTorch lightening to manage random seeds.</p>
+<h2 id="imports-and-configuration">Imports and Configuration<a class="anchor-link" href="#imports-and-configuration">&#182;</a></h2><p>We can use PyTorch lightening to manage random seeds across multiple workers.</p>
 
 </div>
 </div>
@@ -2430,38 +2430,38 @@ pl.seed_everything(42, workers=True)</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train_data</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span>
-    <span class="n">root</span><span class="o">=</span><span class="s1">&#39;./data&#39;</span><span class="p">,</span>
+    <span class="n">root</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="p">,</span>
     <span class="n">train</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
 <span class="p">)</span>
 
 <span class="n">test_data</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span>
-    <span class="n">root</span><span class="o">=</span><span class="s1">&#39;./data&#39;</span><span class="p">,</span>
+    <span class="n">root</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="p">,</span>
     <span class="n">train</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> instances of training data&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> instances of training data&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> instances of training data&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> instances of training data&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">train_data = torchvision.datasets.MNIST(
-    root='./data',
+    root="./data",
     train=True,
     download=True,
-    transform=torchvision.transforms.ToTensor()
+    transform=torchvision.transforms.ToTensor(),
 )
 
 test_data = torchvision.datasets.MNIST(
-    root='./data',
+    root="./data",
     train=False,
     download=True,
-    transform=torchvision.transforms.ToTensor()
+    transform=torchvision.transforms.ToTensor(),
 )
 
-print(f'{len(train_data):,} instances of training data')
-print(f'{len(test_data):,} instances of training data')</div>
+print(f"{len(train_data):,} instances of training data")
+print(f"{len(test_data):,} instances of training data")</div>
     
         </div>
     </div>
@@ -2528,12 +2528,12 @@ print(f'{len(test_data):,} instances of training data')</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data_instance</span><span class="p">,</span> <span class="n">data_label</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;label = </span><span class="si">{</span><span class="n">data_label</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;label = </span><span class="si">{</span><span class="n">data_label</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data_instance</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">data_instance, data_label = train_data[0]
-print(f'label = {data_label}')
-_ = plt.imshow(data_instance[0], cmap='gray')</div>
+print(f"label = {data_label}")
+_ = plt.imshow(data_instance[0], cmap="gray")</div>
     
         </div>
     </div>
@@ -2589,7 +2589,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="training-a-classification-model">Training a Classification Model<a class="anchor-link" href="#training-a-classification-model">&#182;</a></h2><p>The <code>pytorch_lightning.LightningModule</code> inherits from <code>torch.nn.Module</code> and extends with several methods that help to standardise deep learning workflows. We will only make use of those that assist with training and prediction - for full details see the <a href="https://pytorch-lightning.readthedocs.io/en/latest/common/lightning_module.html">LightningModule API reference</a>.</p>
+<h2 id="training-a-classification-model">Training a Classification Model<a class="anchor-link" href="#training-a-classification-model">&#182;</a></h2><p>The <code>pytorch_lightning.LightningModule</code> class inherits the <code>torch.nn.Module</code> class and extends it with several methods that help to standardise deep learning workflows. We will only make use of those that assist with training and prediction - for full details see the <a href="https://pytorch-lightning.readthedocs.io/en/latest/common/lightning_module.html">LightningModule API reference</a>.</p>
 
 </div>
 </div>
@@ -2617,10 +2617,10 @@ class="
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">ClassifyMNIST</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">LightningModule</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;MNIST classification with PyTorch Lightening.&quot;&quot;&quot;</span>
-    
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_hidden_neurons</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Constructor.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Model definition and configuration.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -2632,14 +2632,16 @@ class="
             <span class="n">nn</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
             <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="n">n_hidden_neurons</span><span class="p">),</span>
             <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(),</span>
-            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_hidden_neurons</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_classes</span><span class="p">)</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_hidden_neurons</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_classes</span><span class="p">),</span>
         <span class="p">)</span>
-    
+
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Compute a forward-pass of the model.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">training_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">training_step</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Compute the loss for a single batch within an epoch.&quot;&quot;&quot;</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">batch</span>
         <span class="n">y_hat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -2652,7 +2654,9 @@ class="
         <span class="n">optimiser</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">optimiser</span>
 
-    <span class="k">def</span> <span class="nf">test_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">test_step</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Compute test metrics for a single batch of test data.&quot;&quot;&quot;</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">batch</span>
         <span class="n">y_hat_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -2661,7 +2665,12 @@ class="
         <span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;accuracy&quot;</span><span class="p">:</span> <span class="n">accuracy</span><span class="p">}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log_dict</span><span class="p">(</span><span class="n">metrics</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">predict_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dataloader_idx</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">predict_step</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">batch</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+        <span class="n">batch_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">dataloader_idx</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Score a single batch of data.&quot;&quot;&quot;</span>
         <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">batch</span>
         <span class="n">y_hat_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -2670,10 +2679,10 @@ class="
 </pre></div>
 <div id="cell-4" class="clipboard-copy-txt">class ClassifyMNIST(pl.LightningModule):
     """MNIST classification with PyTorch Lightening."""
-    
+
     def __init__(self, n_hidden_neurons):
         """Constructor.
-        
+
         Model definition and configuration.
         """
         super().__init__()
@@ -2685,14 +2694,16 @@ class="
             nn.Flatten(),
             nn.Linear(self.input_dim, n_hidden_neurons),
             nn.ReLU(),
-            nn.Linear(n_hidden_neurons, self.n_classes)
+            nn.Linear(n_hidden_neurons, self.n_classes),
         )
-    
+
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """Compute a forward-pass of the model."""
         return self.model(X)
 
-    def training_step(self, batch: Tuple[torch.Tensor, torch.Tensor], batch_idx: int) -> torch.Tensor:
+    def training_step(
+        self, batch: Tuple[torch.Tensor, torch.Tensor], batch_idx: int
+    ) -> torch.Tensor:
         """Compute the loss for a single batch within an epoch."""
         X, y = batch
         y_hat = self.model.forward(X)
@@ -2705,7 +2716,9 @@ class="
         optimiser = torch.optim.SGD(self.parameters(), lr=0.05)
         return optimiser
 
-    def test_step(self, batch: Tuple[torch.Tensor, torch.Tensor], batch_idx: int) -> None:
+    def test_step(
+        self, batch: Tuple[torch.Tensor, torch.Tensor], batch_idx: int
+    ) -> None:
         """Compute test metrics for a single batch of test data."""
         X, y = batch
         y_hat_prob = self.model(X)
@@ -2714,7 +2727,12 @@ class="
         metrics = {"accuracy": accuracy}
         self.log_dict(metrics)
 
-    def predict_step(self, batch: Tuple[torch.Tensor, torch.Tensor], batch_idx: int, dataloader_idx: int = 0) -> torch.Tensor:
+    def predict_step(
+        self,
+        batch: Tuple[torch.Tensor, torch.Tensor],
+        batch_idx: int,
+        dataloader_idx: int = 0,
+    ) -> torch.Tensor:
         """Score a single batch of data."""
         X, y = batch
         y_hat_prob = self.model(X)
@@ -2735,8 +2753,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The <code>training_step</code> and <code>configure_optimizers</code> methods will enable the <code>Trainer</code> class to run training, without us needing to develop the training loop. Whereas these methods are mandatory, there are many methods that can be overriden that are not. We've decided to define our own <code>test_step</code> and <code>predict_step</code> methods, to enable the computation of performance metrics and inference, respectively.</p>
-<p>We can now fit the model using the <code>Trainer</code> class, that will handles GPU acceleration, checkpointing (i.e., saving) parameters and a lot more - see the <a href="https://pytorch-lightning.readthedocs.io/en/latest/common/trainer.html">Trainer API reference</a> for the full details.</p>
+<p>The <code>training_step</code> and <code>configure_optimizers</code> methods will enable <code>Trainer</code> objects to run training, without us needing to develop the training loop. Whereas these methods are essentially mandatory, there are many methods that can be overriden that are not. We've decided to define our own <code>test_step</code> and <code>predict_step</code> methods, to enable the computation of performance metrics and inference.</p>
+<p>We now fit the model using an instance of the <code>Trainer</code> class, that will handles GPU acceleration, checkpointing (i.e., saving) parameters and a lot more - see the <a href="https://pytorch-lightning.readthedocs.io/en/latest/common/trainer.html">Trainer API reference</a> for the full details.</p>
 
 </div>
 </div>
@@ -2762,13 +2780,17 @@ class="
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ClassifyMNIST</span><span class="p">(</span><span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)</span>
-<span class="n">trainer</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">Trainer</span><span class="p">(</span><span class="n">max_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">deterministic</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default_root_dir</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">accelerator</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">ClassifyMNIST</span><span class="p">(</span><span class="mi">28</span> <span class="o">*</span> <span class="mi">28</span><span class="p">)</span>
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">Trainer</span><span class="p">(</span>
+    <span class="n">max_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">deterministic</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default_root_dir</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">accelerator</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span>
+<span class="p">)</span>
 <span class="n">train_data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">train_dataloaders</span><span class="o">=</span><span class="n">train_data_loader</span><span class="p">)</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">model = ClassifyMNIST(28*28)
-trainer = pl.Trainer(max_epochs=10, deterministic=True, default_root_dir=".", accelerator="auto")
+<div id="cell-5" class="clipboard-copy-txt">model = ClassifyMNIST(28 * 28)
+trainer = pl.Trainer(
+    max_epochs=10, deterministic=True, default_root_dir=".", accelerator="auto"
+)
 train_data_loader = DataLoader(dataset=train_data, batch_size=500, num_workers=10)
 trainer.fit(model=model, train_dataloaders=train_data_loader)</div>
     
@@ -2847,7 +2869,7 @@ HPU available: False, using: 0 HPUs
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Asses the model on the test dataset.</p>
+<p>We can also use our <code>Trainer</code> object to apply our <code>test_step</code> to all batches of our test dataset.</p>
 
 </div>
 </div>
@@ -2963,7 +2985,7 @@ Loaded model weights from checkpoint at ./lightning_logs/version_4/checkpoints/e
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Batch inference automation.</p>
+<p>And our <code>Trainer</code> object will also apply our <code>predict_step</code> to all batches of an arbitrary dataset.</p>
 
 </div>
 </div>
@@ -2989,10 +3011,16 @@ Loaded model weights from checkpoint at ./lightning_logs/version_4/checkpoints/e
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">trainer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ckpt_path</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span> <span class="n">dataloaders</span><span class="o">=</span><span class="n">test_data_loader</span><span class="p">,</span> <span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">trainer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">ckpt_path</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span>
+    <span class="n">dataloaders</span><span class="o">=</span><span class="n">test_data_loader</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt">predictions = trainer.predict(ckpt_path="best", dataloaders=test_data_loader, )
+<div id="cell-7" class="clipboard-copy-txt">predictions = trainer.predict(
+    ckpt_path="best",
+    dataloaders=test_data_loader,
+)
 predictions[0]</div>
     
         </div>
@@ -3061,7 +3089,7 @@ Loaded model weights from checkpoint at ./lightning_logs/version_4/checkpoints/e
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Scoring a single instance manually.</p>
+<p>And we can still score a single instance of data manually.</p>
 
 </div>
 </div>
@@ -3130,38 +3158,6 @@ index</div>
 
 </div>
 
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-9">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span>
-</pre></div>
-<div id="cell-9" class="clipboard-copy-txt"></div>
-    
-        </div>
-    </div>
-
-</div>
 </div>
 
 </div>
