@@ -16,6 +16,7 @@ nav:
       - Linear Regression with SGD: pytorch/linear_regression_sgd.ipynb
       - Logistic Regression with SGD: pytorch/logistic_regression_sgd.ipynb
       - Deep Learning: pytorch/MNIST.ipynb
+      - PyTorch Lightning: pytorch/MNIST_pytorch_lightning.ipynb
     - JAX:
       - jax/README.md
       - Demo Requirements: jax/docs/demo_requirements.md

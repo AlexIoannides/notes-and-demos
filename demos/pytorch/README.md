@@ -9,7 +9,7 @@
 * How to create custom data loaders for efficient model training.
 * How to build and train ML models from first principles - linear and logistic regression.
 * How to build and train a deep learning model for image classification.
-* How the PyTorch Lightening framework streamlines the deep learning workflow (revisiting our image classification model).
+* How the PyTorch Lightening framework streamlines the deep learning workflow.
 
 ## Running the Demo
 
