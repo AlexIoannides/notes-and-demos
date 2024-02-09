@@ -1,0 +1,14 @@
+# example config valyes that we will use Pydantic to validate
+
+SCHEMA_VERSION: "0.1"
+
+PROJECT_ID: 012345
+PROJECT_ENV: prod
+PROJECT_URL: http://foo.com/bar.html
+
+USER_CERT:
+  secret_resource_name: http://foo.com/secrets/
+  filename: README.md
+
+USERNAME:
+  env_var: foo-bar-1
