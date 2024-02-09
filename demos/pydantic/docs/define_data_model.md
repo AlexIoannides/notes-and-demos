@@ -1,4 +1,4 @@
-# Define Data Model
+# Defining a Data Model
 
 A data model for a hypothetical config file can be defined as:
 

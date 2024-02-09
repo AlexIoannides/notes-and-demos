@@ -1,4 +1,4 @@
-mkdocs==1.4.2
-mkdocs-jupyter==0.24.2
-mkdocs-material==8.5.10
-black[jupyter]==22.10.0
+mkdocs==1.5.*
+mkdocs-jupyter==0.24.*
+mkdocs-material==9.5.*
+black[jupyter]==24.1.1

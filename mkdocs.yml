@@ -58,6 +58,12 @@ nav:
       - Demo Requirements: sqlalchemy/docs/demo_requirements.md
       - Defining Data Models: sqlalchemy/docs/data_models.md
       - ORM Basics: sqlalchemy/sql-alchemy-basics.ipynb
+  - Software Engineering:
+    - Pydantic:
+      - pydantic/README.md
+      - Demo Requirements: pydantic/docs/demo_requirements.md
+      - Defining a Data Model: pydantic/docs/define_data_model.md
+      - Validating Runtime Data: pydantic/docs/validating_runtime_data.md
 
 plugins:
   - mkdocs-jupyter:

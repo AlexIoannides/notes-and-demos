@@ -1,4 +1,4 @@
-# Validating Data
+# Validating Runtime Data
 
 The data model can be imported and used to validate config loaded from YAML files. Two different approaches to runtime validation are demonstrated:
 
