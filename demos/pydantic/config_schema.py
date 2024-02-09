@@ -1,27 +1,24 @@
-"""Config schema defined using Pydantic."""
-from typing import Literal
+"""Config file schema defined using Pydantic."""
 
-from pydantic import BaseModel, ValidationError
+from typing import Literal, Optional
 
-_VERSION = "0.1"
+from pydantic import BaseModel, ConfigDict, FilePath, HttpUrl
 
-class Config(BaseModel):
+
+class _UserCert(BaseModel):
+    """Schema for User certificate config components."""
+
+    secret_resource_name: HttpUrl
+    filename: FilePath
+
+
+class ConfigV1(BaseModel):
     """Schema for PROJECT config values."""
 
-    SCHEMA_VERSION: Literal[_VERSION]
+    model_config = ConfigDict(frozen=True)
+
+    SCHEMA_VERSION: Literal["0.1"]
     PROJECT_ID: int
     PROJECT_ENV: Literal["dev", "test", "prod"]
-
-
-if __name__ == "__main__":
-    config_instance = {
-        "SCHEMA_VERSION": "0.1",
-        "PROJECT_ID": 123,
-        "PROJECT_ENV": "devv"
-    }
-    try:
-        config = Config(**config_instance)
-        print(config.model_dump_json(indent=2))
-    except ValidationError as e:
-        for error in e.errors():
-            print(f"ERROR: {error['loc'][0]} --> {error['msg']}")
+    USER_CERT: _UserCert
+    USER_TAG: Optional[str] = None
