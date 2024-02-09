@@ -8,7 +8,7 @@ PROJECT_URL: http://foo.com/bar.html
 
 USER_CERT:
   secret_resource_name: http://foo.com/secrets/
-  filename: bar.cert
+  filename: README.md
 
 USERNAME:
   env_var: foo-bar-1

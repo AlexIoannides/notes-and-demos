@@ -15,7 +15,9 @@ class _UserCert(BaseModel):
 class ConfigV1(BaseModel):
     """Schema for PROJECT config values."""
 
-    model_config = ConfigDict(frozen=True)
+    model_config = ConfigDict(
+        frozen=True, extra="allow"
+    )  # make immutable and allow extra fields
 
     SCHEMA_VERSION: Literal["0.1"]
     PROJECT_ID: int
