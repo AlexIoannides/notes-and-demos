@@ -11,14 +11,14 @@ from config_schema import ConfigV1
 
 
 def get_config(file: Path = Path.cwd() / "config.yaml") -> ConfigV1:
-    """Get validated config."""
+    """Get validated config as an instance of the data model."""
     with open(file) as f:
         raw_config: dict[str, Any] = yaml.safe_load(f)
     return ConfigV1(**raw_config)
 
 
 def get_config_as_dict(file: Path = Path.cwd() / "config.yaml") -> dict[str, Any]:
-    """Get validated config as a dictionary."""
+    """Get config as a dictionary that has been validated against the data model."""
     with open(file) as f:
         raw_config: dict[str, Any] = yaml.safe_load(f)
     ConfigV1.model_validate(raw_config)

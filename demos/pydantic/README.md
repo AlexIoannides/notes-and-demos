@@ -8,7 +8,7 @@ This demo shows how Pydantic can be used to validate a config file (written in Y
 
 * Define a data model.
 * Use the data model to validate config loaded from a YAML file.
-* Show the difference between validating data in a `dict` and as part of data object instatiation.
+* Show the difference between validating data in a `dict` and as part of data model instatiation.
 * Demonstrate how validation errors can be handled and reported to Users.
 
 ## Running the Demo
