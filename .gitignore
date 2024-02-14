@@ -1,4 +1,5 @@
 # misc
+.ruff_cache
 .DS_Store
 .vscode
 
